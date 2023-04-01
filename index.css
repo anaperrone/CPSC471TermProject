@@ -1,0 +1,93 @@
+.index-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.index-page {
+  width: 100%;
+  height: 1117px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  justify-content: center;
+  background-color: rgba(23, 38, 77, 1);
+}
+.index-waves-background {
+  top: 550px;
+  left: 0px;
+  position: absolute;
+}
+.parkshark-logo-text {
+  top: 76px;
+  left: 178px;
+  color: rgba(255, 255, 255, 1);
+  width: 453px;
+  height: auto;
+  position: absolute;
+  font-size: 62.43959426879883px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Montserrat Alternates;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.parkshark-logo {
+  top: 76px;
+  left: 80px;
+  position: absolute;
+}
+.index-message {
+  top: 268px;
+  left: 79px;
+  color: rgba(255, 255, 255, 1);
+  width: 1574px;
+  height: auto;
+  position: absolute;
+  font-size: 137.92710876464844px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Source Sans Pro;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.index-reg-log-button {
+  top: 75px;
+  right: 102px;
+  width: 327px;
+  height: 75px;
+  display: flex;
+  position: absolute;
+  font-size: 30px;
+  font-family: Source Sans Pro;
+  border-style: hidden;
+  border-radius: 16px;
+  flex-direction: row;
+}
+.index-reg-log-button-arrow {
+  top: 28px;
+  right: 33px;
+  width: 23px;
+  height: 22px;
+  position: absolute;
+}
+.index-reg-log-button-text {
+  font-size: 35px;
+  align-self: center;
+  font-weight: 400;
+}

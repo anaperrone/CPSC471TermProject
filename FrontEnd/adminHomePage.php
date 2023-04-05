@@ -54,27 +54,42 @@
   </head>
   <body>
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      <link href="./homePage.css" rel="stylesheet" />
 
-      <div class="index-container">
-        <div class="index-page">
-          <img
-            src="public/playground_assets/Waves.png"
-            class="index-waves-background"
-          />
-          <span class="parkshark-logo-text"><span>ParkShark</span></span>
-          <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-          <span class="index-message"><span>The Best Way To Park From Anywhere In The City</span>
-          </span>
-          <button class="index-reg-log-button button">
+      <div class="homePage-container">
+        <div class="homePage-page">
             <img
-              src="public/playground_assets/vector125-z04h.svg"
-              alt="Vector125"
-              class="index-reg-log-button-arrow "
+                src="public/playground_assets/Waves.png"
+                class="homePage-waves-background"
             />
-            <span class="index-reg-log-button-text">Register / Log In</span>
-            </span>
-          </button>
+            <span class="parkshark-logo-text"><span>ParkShark</span></span>
+            <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+            <span class='homePage-whereto-message'><span>Where to?</span></span>
+            <a href='parkinglotPage.php' class='homePage-parkinglot-button'> 
+              <button type = 'submit'>
+                <span class='homePage-parkinglot-button-text'><span>Manage Parking Lots</span></span>
+              </button>
+            </a>
+            <a href='reservestallPage.php' class='homePage-reservestall-button'> 
+              <button type = 'submit'>
+                <span class='homePage-reservestall-button-text'><span>Manage Parking Stalls</span></span>
+              </button>
+            </a>
+            <a href='ticketPage.php' class='homePage-ticket-button'> 
+              <button type = 'submit'>
+                <span class='homePage-ticket-button-text'><span>Manage Tickets</span></span>
+              </button>
+            </a>
+            <a href='vehiclePage.php' class='homePage-vehicle-button'> 
+              <button type = 'submit'>
+                <span class='homePage-vehicle-button-text'><span>Manage Vehicles</span></span>
+              </button>
+            </a>
+            <a href='accountPage.php' class='homePage-account-button'> 
+              <button type = 'submit'>
+                <span class='homePage-account-button-text'><span>Manage Accounts</span></span>
+              </button>
+            </a>
         </div>
       </div>
     </div>

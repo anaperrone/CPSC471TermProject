@@ -54,39 +54,41 @@
   </head>
   <body>
     <div>
-      <link href="./loginPage.css" rel="stylesheet" />
+      <link href="./adminLoginPage.css" rel="stylesheet" />
 
-      <div class="loginPage-container">
-        <div class="loginPage-page">
+      <div class="adminLoginPage-container">
+        <div class="adminLoginPage-page">
             <img
                 src="public/playground_assets/Waves.png"
-                class="index-waves-background"
+                class="adminLoginPage-waves-background"
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-            <span class='loginPage-text'>New to ParkShark? Sign up</span>
-            <span class='loginPage-message'><span>Welcome Back!</span></span>
-            <form id = login action='index.php' method='post'>
+            <span class='adminLoginPage-welcome-message'><span>Welcome Admin</span></span>
+            
+            <form id = adminLogin action='index.php' method='post'>
                 <input
                 type='password'
                 placeholder='Password'
-                class='loginPage-password-input input'
+                class='adminLoginPage-password-input input'
                 name = 'password'
                 />
                 <input
                 type='text'
                 placeholder='Username'
-                class='loginPage-username-input input'
+                class='adminLoginPage-username-input input'
                 name = 'username'
                 />
-                <a href='javascript: login.submit();' class='loginPage-log-in-button'>
+                <a href='adminHomePage.php' class='adminLoginPage-log-in-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
-                    class='login-page-log-in-button-shape'
+                    class='adminLogin-page-log-in-button-shape'
                 />
-                <span class='login-page-log-in-button-text'><span>Log In</span></span>
+                <span class='adminLogin-page-log-in-button-text'><span>Log In</span></span>
                 </a>
             </form>
+            <span class='adminLoginPage-goback-message'>Not an Admin? Go back</span>
+            <a href='loginPage.php' class='loginPage-link'> here </a>
         </div>
       </div>
     </div>

@@ -87,8 +87,7 @@
                 <span class='adminLogin-page-log-in-button-text'><span>Log In</span></span>
                 </a>
             </form>
-            <span class='adminLoginPage-goback-message'>Not an Admin? Go back</span>
-            <a href='loginPage.php' class='loginPage-link'> here </a>
+            <a href='loginPage.php' class='loginPage-link'>Not an Admin? Go back here</a>
         </div>
       </div>
     </div>

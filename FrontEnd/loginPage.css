@@ -139,28 +139,11 @@
     text-decoration: none;
 }
 
-.loginPage-signup-message {
+.registerPage-link {
     top: 760px;
     left: 44%;
     color: #FFFFFF;
-    width: 324px;
-    height: auto;
-    position: absolute;
-    font-size: 20px;
-    font-family: Source Sans Pro;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-.registerPage-link { /* This is for "here" button */
-    top: 760px;
-    left: 54.5%;
-    color: #0047FF;
-    width: 56px;
+    width: 400px;
     height: auto;
     position: absolute;
     font-size: 20px;
@@ -171,30 +154,13 @@
     margin-right: 0;
     margin-bottom: 0;
     text-decoration: underline;
-  }
+}
 
-.loginPage-admin-message {
+.adminLoginPage-link {
     top: 800px;
     left: 44.5%;
     color: #FFFFFF;
-    width: 324px;
-    height: auto;
-    position: absolute;
-    font-size: 20px;
-    font-family: Source Sans Pro;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-.adminLoginPage-link { /* This is for "here" button */
-    top: 800px;
-    left: 54%;
-    color: #0047FF;
-    width: 56px;
+    width: 400px;
     height: auto;
     position: absolute;
     font-size: 20px;

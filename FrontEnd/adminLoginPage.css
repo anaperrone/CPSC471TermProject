@@ -139,28 +139,11 @@
     text-decoration: none;
 }
 
-.adminLoginPage-goback-message {
+.loginPage-link {
     top: 760px;
     left: 45%;
     color: #FFFFFF;
-    width: 324px;
-    height: auto;
-    position: absolute;
-    font-size: 20px;
-    font-family: Source Sans Pro;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-.loginPage-link { /* This is for "here" button */
-    top: 760px;
-    left: 54.5%;
-    color: #0047FF;
-    width: 56px;
+    width: 400px;
     height: auto;
     position: absolute;
     font-size: 20px;

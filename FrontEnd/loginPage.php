@@ -87,10 +87,8 @@
                 <span class='login-page-log-in-button-text'><span>Log In</span></span>
                 </a>
             </form>
-            <span class='loginPage-signup-message'>New to ParkShark? Sign up</span>
-            <a href='registerPage.php' class='registerPage-link'> here </a>
-            <span class='loginPage-admin-message'>Are you an Admin? Click</span>
-            <a href='adminLoginPage.php' class='adminLoginPage-link'> here </a>
+            <a href='registerPage.php' class='registerPage-link'> New to ParkShark? Sign up here </a>
+            <a href='adminLoginPage.php' class='adminLoginPage-link'> Are you an Admin? Click here</a>
         </div>
       </div>
     </div>

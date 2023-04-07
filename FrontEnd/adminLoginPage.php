@@ -82,9 +82,9 @@
                 <a href='adminHomePage.php' class='adminLoginPage-log-in-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
-                    class='adminLogin-page-log-in-button-shape'
+                    class='adminLoginPage-log-in-button-shape'
                 />
-                <span class='adminLogin-page-log-in-button-text'><span>Log In</span></span>
+                <span class='adminLoginPage-log-in-button-text'><span>Log In</span></span>
                 </a>
             </form>
             <a href='loginPage.php' class='loginPage-link'>Not an Admin? Go back here</a>

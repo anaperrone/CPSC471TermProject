@@ -218,3 +218,196 @@
     text-decoration: none;
 }
 
+/* mobile compatability for displays with width under 414px */
+
+@media(max-width: 414px) {
+    .homePage-page {
+        height: 844px;
+    }
+  
+    .homePage-waves-background {
+        top: 600px;
+        width: 600px;
+        left: -110px;
+        position: absolute;
+    }
+    .parkshark-logo-text {
+        display: none;
+    }
+    .parkshark-logo {
+        top: 780px;
+        left: 172px;
+        position: absolute;
+        width: 50px;
+    }
+    .homePage-whereto-message {
+        top: 140px;
+        left: 100px;
+        color: rgba(255, 255, 255, 1);
+        width: 414px;
+        height: auto;
+        position: absolute;
+        font-size: 45px;
+        align-self: auto;
+        font-style: Regular;
+        text-align: left;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
+    .homePage-parkinglot-button {
+        top: 230px;
+        left: 40px;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 40px;
+        background-color: #FFFFFF;
+    }
+    
+    .homePage-parkinglot-button-text {
+        top: 17px;
+        left: 14px;
+        color: #18274E;
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 23px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .homePage-reservestall-button {
+        top: 230px;
+        left: 210px;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 40px;
+        background-color: #FFFFFF;
+    }
+    
+    .homePage-reservestall-button-text {
+        top: 17px;
+        left: 14px;
+        color: #18274E;
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 23px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .homePage-ticket-button {
+        top: 390px;
+        left: 40px;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 40px;
+        background-color: #FFFFFF;
+    }
+    
+    .homePage-ticket-button-text {
+        top: 28px;
+        left: 22px;
+        color: #18274E;
+        width: 95px;
+        height: auto;
+        position: absolute;
+        font-size: 23px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .homePage-vehicle-button {
+        top: 390px;
+        left: 210px;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 40px;
+        background-color: #FFFFFF;
+    }
+    
+    .homePage-vehicle-button-text {
+        top: 28px;
+        left: 22px;
+        color: #18274E;
+        width: 95px;
+        height: auto;
+        position: absolute;
+        font-size: 23px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .homePage-account-button {
+        top: 550px;
+        left: 125px;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 40px;
+        background-color: #FFFFFF;
+    }
+    
+    .homePage-account-button-text {
+        top: 28px;
+        left: 22px;
+        color: #18274E;
+        width: 95px;
+        height: auto;
+        position: absolute;
+        font-size: 23px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+}
+

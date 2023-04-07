@@ -111,7 +111,7 @@
     border-color: transparent;
     text-decoration: none;
 }
-.login-page-log-in-button-shape { /*this is the Log In button rec*/
+.loginPage-log-in-button-shape { /*this is the Log In button rec*/
     top: 0px;
     left: 0px;
     width: 234px;
@@ -120,7 +120,7 @@
     border-color: transparent;
     border-radius: 50px;
 }
-.login-page-log-in-button-text { /*this is the Log In text inside the button*/
+.loginPage-log-in-button-text { /*this is the Log In text inside the button*/
     top: 14px;
     left: 62px;
     color: rgba(255, 255, 255, 1);
@@ -171,4 +171,153 @@
     margin-right: 0;
     margin-bottom: 0;
     text-decoration: underline;
-  }
+}
+
+/* mobile compatability for displays with width under 414px */
+
+@media(max-width: 414px) {
+    .loginPage-page {
+        height: 844px;
+    }
+  
+    .loginPage-waves-background {
+        top: 600px;
+        width: 600px;
+        left: -110px;
+        position: absolute;
+    }
+    .parkshark-logo-text {
+        display: none;
+    }
+    .parkshark-logo {
+        top: 780px;
+        left: 172px;
+        position: absolute;
+        width: 50px;
+    }
+    .loginPage-welcomeback-message {
+        top: 200px;
+        left: 50px;
+        color: rgba(255, 255, 255, 1);
+        width: 414px;
+        height: auto;
+        position: absolute;
+        font-size: 45px;
+        align-self: auto;
+        font-style: Regular;
+        text-align: left;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
+    .loginPage-username-input {
+        top: 290px;
+        left: 20px;
+        width: 350px;
+        height: 45px;
+        position: absolute;
+        font-size: 17px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        background-color: #FFFFFF;
+        border-top-width: 10px;
+        border-left-width: 20px;
+        border-right-width: 10px;
+        border-bottom-width: 10px;
+    }
+
+    .loginPage-password-input {
+        top: 370px;
+        left: 20px;
+        width: 350px;
+        height: 45px;
+        position: absolute;
+        font-size: 17px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        background-color: #FFFFFF;
+        border-top-width: 10px;
+        border-left-width: 20px;
+        border-right-width: 10px;
+        border-bottom-width: 10px;
+    }
+
+    .loginPage-log-in-button { /*this is the Log In button "container" */
+        top: 455px;
+        left: 95px;
+        width: 234px;
+        height: 55px;
+        display: flex;
+        position: absolute;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-color: transparent;
+        text-decoration: none;
+    }
+    .loginPage-log-in-button-shape { /*this is the Log In button rec*/
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 55px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 50px;
+    }
+    .loginPage-log-in-button-text { /*this is the Log In text inside the button*/
+        top: 11px;
+        left: 45px;
+        color: rgba(255, 255, 255, 1);
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 600;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .registerPage-link {
+        top: 540px;
+        left: 60px;
+        color: #FFFFFF;
+        width: 400px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+    
+    .adminLoginPage-link {
+        top: 580px;
+        left: 68px;
+        color: #FFFFFF;
+        width: 400px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+}

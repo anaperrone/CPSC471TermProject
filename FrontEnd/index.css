@@ -91,3 +91,71 @@
   align-self: center;
   font-weight: 400;
 }
+
+/* mobile compatability for displays with width under 414px */
+
+@media(max-width: 414px) {
+  .index-page {
+    height: 844px;
+  }
+
+  .index-waves-background {
+    top: 600px;
+    width: 600px;
+    left: -110px;
+    position: absolute;
+  }
+  .parkshark-logo-text {
+    display: none;
+  }
+  .parkshark-logo {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    width: 50px;
+  }
+  .index-message {
+    top: 268px;
+    left: 27px;
+    color: rgba(255, 255, 255, 1);
+    width: 390px;
+    height: auto;
+    position: absolute;
+    font-size: 60px;
+    align-self: auto;
+    font-style: Regular;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+  .index-reg-log-button {
+    top: 20px;
+    right: 27px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    font-size: 15px;
+    font-family: Source Sans Pro;
+    border-style: hidden;
+    border-radius: 16px;
+    flex-direction: row;
+  }
+  .index-reg-log-button-arrow {
+    top: 15px;
+    right: 15px;
+    width: 13px;
+    height: 22px;
+    position: absolute;
+  }
+  .index-reg-log-button-text {
+    font-size: 15px;
+    align-self: center;
+    font-weight: 400;
+  }
+}

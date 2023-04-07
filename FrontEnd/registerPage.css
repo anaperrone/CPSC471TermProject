@@ -154,3 +154,168 @@
     margin-bottom: 0;
     text-decoration: none;
 }
+
+.loginPage-link {
+    top: 785px;
+    left: 43%;
+    color: #FFFFFF;
+    width: 400px;
+    height: auto;
+    position: absolute;
+    font-size: 20px;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+/* mobile compatability for displays with width under 414px */
+
+@media(max-width: 414px) {
+    .registerPage-page {
+        height: 844px;
+    }
+  
+    .registerPage-waves-background {
+        top: 600px;
+        width: 600px;
+        left: -110px;
+        position: absolute;
+    }
+    .parkshark-logo-text {
+        display: none;
+    }
+    .parkshark-logo {
+        top: 780px;
+        left: 172px;
+        position: absolute;
+        width: 50px;
+    }
+    .registerPage-welcome-message {
+        top: 200px;
+        left: 100px;
+        color: rgba(255, 255, 255, 1);
+        width: 414px;
+        height: auto;
+        position: absolute;
+        font-size: 45px;
+        align-self: auto;
+        font-style: Regular;
+        text-align: left;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
+    .registerPage-username-input {
+        top: 290px;
+        left: 20px;
+        width: 350px;
+        height: 45px;
+        position: absolute;
+        font-size: 17px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        background-color: #FFFFFF;
+        border-top-width: 10px;
+        border-left-width: 20px;
+        border-right-width: 10px;
+        border-bottom-width: 10px;
+    }
+
+    .registerPage-password-input {
+        top: 370px;
+        left: 20px;
+        width: 350px;
+        height: 45px;
+        position: absolute;
+        font-size: 17px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        background-color: #FFFFFF;
+        border-top-width: 10px;
+        border-left-width: 20px;
+        border-right-width: 10px;
+        border-bottom-width: 10px;
+    }
+
+    .registerPage-confirm-password-input {
+        top: 450px;
+        left: 20px;
+        width: 350px;
+        height: 45px;
+        position: absolute;
+        font-size: 17px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        background-color: #FFFFFF;
+        border-top-width: 10px;
+        border-left-width: 20px;
+        border-right-width: 10px;
+        border-bottom-width: 10px;
+    }
+
+    .registerPage-register-button { /*this is the Log In button "container" */
+        top: 540px;
+        left: 95px;
+        width: 234px;
+        height: 55px;
+        display: flex;
+        position: absolute;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-color: transparent;
+        text-decoration: none;
+    }
+    .registerPage-register-button-shape { /*this is the Log In button rec*/
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 55px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 50px;
+    }
+    .registerPage-register-button-text { /*this is the Log In text inside the button*/
+        top: 11px;
+        left: 45px;
+        color: rgba(255, 255, 255, 1);
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 600;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
+    .loginPage-link {
+        top: 620px;
+        left: 42px;
+        color: #FFFFFF;
+        width: 400px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+}

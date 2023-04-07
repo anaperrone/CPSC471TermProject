@@ -91,6 +91,7 @@
                 />
                 <span class='registerPage-register-button-text'><span>Register</span></span>
                 </a>
+                <a href='loginPage.php' class='loginPage-link'> Already have an account? Login here</a>
             </form>
         </div>
       </div>

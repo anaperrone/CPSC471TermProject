@@ -64,30 +64,30 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-            <span class='adminHomePage-whereto-message'><span>Where to?</span></span>
+            <span class='adminHomePage-whereto-message'><span>where to?</span></span>
             <a href='parkinglotPage.php' class='adminHomePage-parkinglot-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-parkinglot-button-text'><span>Manage Parking Lots</span></span>
+                <span class='adminHomePage-parkinglot-button-text'><span>manage parking lots</span></span>
               </button>
             </a>
             <a href='reservestallPage.php' class='adminHomePage-reservestall-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-reservestall-button-text'><span>Manage Parking Stalls</span></span>
+                <span class='adminHomePage-reservestall-button-text'><span>manage parking stalls</span></span>
               </button>
             </a>
             <a href='ticketPage.php' class='adminHomePage-ticket-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-ticket-button-text'><span>Manage Tickets</span></span>
+                <span class='adminHomePage-ticket-button-text'><span>manage tickets</span></span>
               </button>
             </a>
             <a href='vehiclePage.php' class='adminHomePage-vehicle-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-vehicle-button-text'><span>Manage Vehicles</span></span>
+                <span class='adminHomePage-vehicle-button-text'><span>manage vehicles</span></span>
               </button>
             </a>
             <a href='accountPage.php' class='adminHomePage-account-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-account-button-text'><span>Manage Accounts</span></span>
+                <span class='adminHomePage-account-button-text'><span>manage accounts</span></span>
               </button>
             </a>
         </div>

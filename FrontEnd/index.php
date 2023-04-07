@@ -64,7 +64,7 @@
           />
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-          <span class="index-message"><span>The Best Way To Park From Anywhere In The City</span>
+          <span class="index-message"><span>the best way to park from anywhere in the city</span>
           </span>
           <a href = 'loginPage.php' class = 'index-reg-log-button button'>
               <img
@@ -72,7 +72,7 @@
                 alt="Vector125"
                 class="index-reg-log-button-arrow "
               />
-              <span class="index-reg-log-button-text">Register / Log In</span>
+              <span class="index-reg-log-button-text">register / login</span>
               </span>
           </a>
         </div>

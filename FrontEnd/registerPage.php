@@ -64,23 +64,23 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-            <span class='registerPage-welcome-message'><span>Welcome!</span></span>
+            <span class='registerPage-welcome-message'><span>welcome!</span></span>
             <form id = signup action='index.php' method='post'>
                 <input
                 type='password'
-                placeholder='Confirm Password'
+                placeholder='confirm password'
                 class='registerPage-confirm-password-input input'
                 name = 'confirmed'
                 />
                 <input
                 type='password'
-                placeholder='Password'
+                placeholder='password'
                 class='registerPage-password-input input'
                 name = 'password'
                 />
                 <input
                 type='text'
-                placeholder='Username'
+                placeholder='username'
                 class='registerPage-username-input input'
                 name = 'username'
                 />
@@ -89,9 +89,9 @@
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
                     class='registerPage-register-button-shape'
                 />
-                <span class='registerPage-register-button-text'><span>Register</span></span>
+                <span class='registerPage-register-button-text'><span>register</span></span>
                 </a>
-                <a href='loginPage.php' class='loginPage-link'> Already have an account? Login here</a>
+                <a href='loginPage.php' class='loginPage-link'> already have an account? login here</a>
             </form>
         </div>
       </div>

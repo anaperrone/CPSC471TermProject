@@ -64,30 +64,30 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-            <span class='homePage-whereto-message'><span>Where to?</span></span>
+            <span class='homePage-whereto-message'><span>where to?</span></span>
             <a href='parkinglotPage.php' class='homePage-parkinglot-button'> 
               <button type = 'submit'>
-                <span class='homePage-parkinglot-button-text'><span>View Parking Lots</span></span>
+                <span class='homePage-parkinglot-button-text'><span>view parking lots</span></span>
               </button>
             </a>
             <a href='reservestallPage.php' class='homePage-reservestall-button'> 
               <button type = 'submit'>
-                <span class='homePage-reservestall-button-text'><span>Reserve Parking Stall</span></span>
+                <span class='homePage-reservestall-button-text'><span>reserve parking stall</span></span>
               </button>
             </a>
             <a href='ticketPage.php' class='homePage-ticket-button'> 
               <button type = 'submit'>
-                <span class='homePage-ticket-button-text'><span>My Tickets</span></span>
+                <span class='homePage-ticket-button-text'><span>my tickets</span></span>
               </button>
             </a>
             <a href='vehiclePage.php' class='homePage-vehicle-button'> 
               <button type = 'submit'>
-                <span class='homePage-vehicle-button-text'><span>My Vehicles</span></span>
+                <span class='homePage-vehicle-button-text'><span>my vehicles</span></span>
               </button>
             </a>
             <a href='accountPage.php' class='homePage-account-button'> 
               <button type = 'submit'>
-                <span class='homePage-account-button-text'><span>Manage Account</span></span>
+                <span class='homePage-account-button-text'><span>manage account</span></span>
               </button>
             </a>
         </div>

@@ -54,42 +54,16 @@
   </head>
   <body>
     <div>
-      <link href="./homePage.css" rel="stylesheet" />
+      <link href="./paymentPage.css" rel="stylesheet" />
 
-      <div class="homePage-container">
-        <div class="homePage-page">
+      <div class="paymentPage-container">
+        <div class="paymentPage-page">
             <img
                 src="public/playground_assets/Waves.png"
-                class="homePage-waves-background"
+                class="paymentPage-waves-background"
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-            <span class='homePage-whereto-message'><span>where to?</span></span>
-            <a href='parkingLotPage.php' class='homePage-parkinglot-button'> 
-              <button type = 'submit'>
-                <span class='homePage-parkinglot-button-text'><span>view parking lots</span></span>
-              </button>
-            </a>
-            <a href='stallPage.php' class='homePage-reservestall-button'> 
-              <button type = 'submit'>
-                <span class='homePage-reservestall-button-text'><span>reserve parking stall</span></span>
-              </button>
-            </a>
-            <a href='ticketPage.php' class='homePage-ticket-button'> 
-              <button type = 'submit'>
-                <span class='homePage-ticket-button-text'><span>my tickets</span></span>
-              </button>
-            </a>
-            <a href='vehiclePage.php' class='homePage-vehicle-button'> 
-              <button type = 'submit'>
-                <span class='homePage-vehicle-button-text'><span>my vehicles</span></span>
-              </button>
-            </a>
-            <a href='accountPage.php' class='homePage-account-button'> 
-              <button type = 'submit'>
-                <span class='homePage-account-button-text'><span>manage account</span></span>
-              </button>
-            </a>
         </div>
       </div>
     </div>

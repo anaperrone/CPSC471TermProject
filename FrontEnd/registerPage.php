@@ -84,7 +84,7 @@
                 class='registerPage-username-input input'
                 name = 'username'
                 />
-                <a href='homePage.php' class='registerPage-register-button'>
+                <a href='paymentPage.php' class='registerPage-register-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
                     class='registerPage-register-button-shape'

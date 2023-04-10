@@ -44,7 +44,10 @@ CREATE TABLE `Parking_Lots` (
 
 INSERT INTO `Parking_Lots` (`LotID`, `Size`, `Address`) VALUES
 (123, 10, '1100 Downtown'),
-(980, 20, '123 Sesame Street');
+(980, 20, '123 Sesame Street'),
+(226, 1, '965 Parkplace'),
+(442, 1, '368 Favor Drive'),
+(111, 1, '482 Marvin Road');
 
 -- --------------------------------------------------------
 
@@ -94,7 +97,10 @@ INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES
 (980, 17, 'Small', 0),
 (980, 18, 'Large', 0),
 (980, 19, 'Large', 0),
-(980, 20, 'Giant', 0);
+(980, 20, 'Giant', 0),
+(226, 1, 'Small', 0),
+(442, 1, 'Giant', 0),
+(111, 1, 'Handicap', 0);
 
 
 

@@ -6,9 +6,9 @@
 <body>
     <?php
     // the creds for the database; change as needed
-    $servername = "localhost:4306";
-    $username = "EWinters";
-    $password = "";
+    $servername = "localhost";
+    $username = "Hamza";
+    $password = "hello";
     $dbname = "ParkingData";
     // initialize the database connection using the DB driver code
     include_once 'DB.php';

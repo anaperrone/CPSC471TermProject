@@ -12,7 +12,7 @@ class DBConnection extends mysqli {
     function connectToDB($serverName, $username, $password, $db) {
         $this->connection = mysqli_connect($serverName, $username, $password, $db);
         
-        if($connection->connect_error){
+        if($this->connection->connect_error){
             echo("Connection Failed<br>");
             $this->isConnected = false;
         }

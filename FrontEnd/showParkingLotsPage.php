@@ -1,9 +1,8 @@
 <?php  
-  $buttonId;
   session_start();
   $servername = "localhost";
-  $username = "Hamza";
-  $password = "hello";
+  $username = "root";
+  $password = "";
   $dbname = "ParkingData";
   // initialize the database connection using the DB driver code
   include_once '../BackEnd/DB.php';
@@ -76,6 +75,7 @@
           />
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+          
           <div class="button-container">
             <a href = "showStallsInLotPage.php"> 
               <?php 

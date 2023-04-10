@@ -87,20 +87,18 @@
               }
               ?>
             </a>
+            
             <script>
-  // Get all buttons with class 'button'
-  const buttons = document.querySelectorAll('.button');
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+            button.addEventListener('click', function() 
+            {
+              const id = this.id;
+              alert(id);
+            });
+            });
+            </script>
 
-  // Loop through buttons and add event listener to each button
-  buttons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Get the button's id
-      const id = this.id;
-      // Show alert with button's id
-      alert(id);
-    });
-  });
-</script>
           </div>
         </div>
       </div>

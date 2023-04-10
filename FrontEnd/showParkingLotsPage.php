@@ -81,12 +81,26 @@
               <?php 
               for($i = 0; $i < sizeof($lotArray); $i++)
               {
-                echo "<button class='button' id=$i> <strong>Address:</strong><br>" . 
+                echo "<button class='button' id='" . $lotArray[$i]->getLotID() . "'> <strong>Address:</strong><br>" . 
                 $lotArray[$i]->getAddress(). "<br><br> <strong>Size:</strong> " . $lotArray[$i]->getSize()
                 . "</button>";
               }
               ?>
             </a>
+            <script>
+  // Get all buttons with class 'button'
+  const buttons = document.querySelectorAll('.button');
+
+  // Loop through buttons and add event listener to each button
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Get the button's id
+      const id = this.id;
+      // Show alert with button's id
+      alert(id);
+    });
+  });
+</script>
           </div>
         </div>
       </div>

@@ -67,17 +67,17 @@
             <span class='homePage-whereto-message'><span>Where to?</span></span>
             <a href='showParkingLotsPage.php' class='homePage-parkinglot-button'> 
               <button type = 'submit'>
-                <span class='homePage-parkinglot-button-text'><span>View parking lots</span></span>
+                <span class='homePage-parkinglot-button-text'><span>View Parking Lots</span></span>
               </button>
             </a>
             <a href='ticketPage.php' class='homePage-ticket-button'> 
               <button type = 'submit'>
-                <span class='homePage-ticket-button-text'><span>My tickets</span></span>
+                <span class='homePage-ticket-button-text'><span>View My Tickets</span></span>
               </button>
             </a>
             <a href='vehiclePage.php' class='homePage-vehicle-button'> 
               <button type = 'submit'>
-                <span class='homePage-vehicle-button-text'><span>My vehicles</span></span>
+                <span class='homePage-vehicle-button-text'><span>View My Vehicles</span></span>
               </button>
             </a>
         </div>

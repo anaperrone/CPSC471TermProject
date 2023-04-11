@@ -71,9 +71,9 @@
 
 .homePage-parkinglot-button {
     top: 430px;
-    left: 750px;
-    width: 200px;
-    height: 150px;
+    left: 33.5%;
+    width: 700px;
+    height: 100px;
     position: absolute;
     border-color: transparent;
     border-radius: 50px;
@@ -81,10 +81,10 @@
 }
 
 .homePage-parkinglot-button-text {
-    top: 20px;
-    left: 45px;
+    top: 30px;
+    left: 225px;
     color: #18274E;
-    width: 111px;
+    width: 250px;
     height: auto;
     position: absolute;
     font-size: 27.606220245361328px;
@@ -100,10 +100,10 @@
 }
 
 .homePage-ticket-button {
-    top: 430px;
-    left: 1250px;
-    width: 200px;
-    height: 150px;
+    top: 580px;
+    left: 33.5%;;
+    width: 700px;
+    height: 100px;
     position: absolute;
     border-color: transparent;
     border-radius: 50px;
@@ -111,10 +111,10 @@
 }
 
 .homePage-ticket-button-text {
-    top: 40px;
-    left: 45px;
+    top: 30px;
+    left: 225px;
     color: #18274E;
-    width: 111px;
+    width: 250px;
     height: auto;
     position: absolute;
     font-size: 27.606220245361328px;
@@ -130,10 +130,10 @@
 }
 
 .homePage-vehicle-button {
-    top: 430px;
-    left: 1000px;
-    width: 200px;
-    height: 150px;
+    top: 730px;
+    left: 33.5%;
+    width: 700px;
+    height: 100px;
     position: absolute;
     border-color: transparent;
     border-radius: 50px;
@@ -141,10 +141,10 @@
 }
 
 .homePage-vehicle-button-text {
-    top: 40px;
-    left: 45px;
+    top: 30px;
+    left: 225px;
     color: #18274E;
-    width: 111px;
+    width: 250px;
     height: auto;
     position: absolute;
     font-size: 27.606220245361328px;
@@ -202,10 +202,10 @@
     }
     
     .homePage-parkinglot-button {
-        top: 230px;
-        left: 210px;
-        width: 140px;
-        height: 120px;
+        top: 240px;
+        left: 20px;
+        width: 350px;
+        height: 80px;
         position: absolute;
         border-color: transparent;
         border-radius: 40px;
@@ -213,10 +213,10 @@
     }
     
     .homePage-parkinglot-button-text {
-        top: 17px;
-        left: 14px;
+        top: 23px;
+        left: 50px;
         color: #18274E;
-        width: 111px;
+        width: 250px;
         height: auto;
         position: absolute;
         font-size: 23px;
@@ -232,10 +232,10 @@
     }
     
     .homePage-ticket-button {
-        top: 390px;
-        left: 40px;
-        width: 140px;
-        height: 120px;
+        top: 360px;
+        left: 20px;
+        width: 350px;
+        height: 80px;
         position: absolute;
         border-color: transparent;
         border-radius: 40px;
@@ -243,10 +243,10 @@
     }
     
     .homePage-ticket-button-text {
-        top: 28px;
-        left: 22px;
+        top: 23px;
+        left: 50px;
         color: #18274E;
-        width: 95px;
+        width: 250px;
         height: auto;
         position: absolute;
         font-size: 23px;
@@ -262,10 +262,10 @@
     }
     
     .homePage-vehicle-button {
-        top: 390px;
-        left: 210px;
-        width: 140px;
-        height: 120px;
+        top: 480px;
+        left: 20px;
+        width: 350px;
+        height: 80px;
         position: absolute;
         border-color: transparent;
         border-radius: 40px;
@@ -273,10 +273,10 @@
     }
     
     .homePage-vehicle-button-text {
-        top: 28px;
-        left: 22px;
+        top: 23px;
+        left: 50px;
         color: #18274E;
-        width: 95px;
+        width: 250px;
         height: auto;
         position: absolute;
         font-size: 23px;

@@ -67,10 +67,22 @@
             <span class='registerPage-welcome-message'><span>welcome!</span></span>
             <form id = signup action='index.php' method='post'>
                 <input
-                type='password'
-                placeholder='confirm password'
-                class='registerPage-confirm-password-input input'
-                name = 'confirmed'
+                type='text'
+                placeholder='first name'
+                class='registerPage-fname-input input'
+                name = 'fname'
+                />
+                <input
+                type='text'
+                placeholder='last name'
+                class='registerPage-lname-input input'
+                name = 'lname'
+                />
+                <input
+                type='text'
+                placeholder='username'
+                class='registerPage-username-input input'
+                name = 'username'
                 />
                 <input
                 type='password'
@@ -79,10 +91,10 @@
                 name = 'password'
                 />
                 <input
-                type='text'
-                placeholder='username'
-                class='registerPage-username-input input'
-                name = 'username'
+                type='password'
+                placeholder='confirm password'
+                class='registerPage-confirm-password-input input'
+                name = 'confirmed'
                 />
                 <a href='paymentPage.php' class='registerPage-register-button'>
                 <img

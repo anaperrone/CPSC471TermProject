@@ -68,6 +68,7 @@
     text-decoration: none;
 }
 
+
 .homePage-parkinglot-button {
     top: 430px;
     left: 750px;
@@ -80,36 +81,6 @@
 }
 
 .homePage-parkinglot-button-text {
-    top: 20px;
-    left: 45px;
-    color: #18274E;
-    width: 111px;
-    height: auto;
-    position: absolute;
-    font-size: 27.606220245361328px;
-    align-self: auto;
-    text-align: center;
-    font-family: Source Sans Pro;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-.homePage-reservestall-button {
-    top: 430px;
-    left: 1000px;
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    border-color: transparent;
-    border-radius: 50px;
-    background-color: #FFFFFF;
-}
-
-.homePage-reservestall-button-text {
     top: 20px;
     left: 45px;
     color: #18274E;
@@ -159,8 +130,8 @@
 }
 
 .homePage-vehicle-button {
-    top: 650px;
-    left: 875px;
+    top: 430px;
+    left: 1000px;
     width: 200px;
     height: 150px;
     position: absolute;
@@ -170,36 +141,6 @@
 }
 
 .homePage-vehicle-button-text {
-    top: 40px;
-    left: 45px;
-    color: #18274E;
-    width: 111px;
-    height: auto;
-    position: absolute;
-    font-size: 27.606220245361328px;
-    align-self: auto;
-    text-align: center;
-    font-family: Source Sans Pro;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-.homePage-account-button {
-    top: 650px;
-    left: 1125px;
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    border-color: transparent;
-    border-radius: 50px;
-    background-color: #FFFFFF;
-}
-
-.homePage-account-button-text {
     top: 40px;
     left: 45px;
     color: #18274E;
@@ -259,38 +200,8 @@
         margin-bottom: 0;
         text-decoration: none;
     }
-
+    
     .homePage-parkinglot-button {
-        top: 230px;
-        left: 40px;
-        width: 140px;
-        height: 120px;
-        position: absolute;
-        border-color: transparent;
-        border-radius: 40px;
-        background-color: #FFFFFF;
-    }
-    
-    .homePage-parkinglot-button-text {
-        top: 17px;
-        left: 14px;
-        color: #18274E;
-        width: 111px;
-        height: auto;
-        position: absolute;
-        font-size: 23px;
-        align-self: auto;
-        text-align: center;
-        font-family: Source Sans Pro;
-        font-weight: 400;
-        line-height: normal;
-        font-stretch: normal;
-        margin-right: 0;
-        margin-bottom: 0;
-        text-decoration: none;
-    }
-    
-    .homePage-reservestall-button {
         top: 230px;
         left: 210px;
         width: 140px;
@@ -301,7 +212,7 @@
         background-color: #FFFFFF;
     }
     
-    .homePage-reservestall-button-text {
+    .homePage-parkinglot-button-text {
         top: 17px;
         left: 14px;
         color: #18274E;
@@ -362,36 +273,6 @@
     }
     
     .homePage-vehicle-button-text {
-        top: 28px;
-        left: 22px;
-        color: #18274E;
-        width: 95px;
-        height: auto;
-        position: absolute;
-        font-size: 23px;
-        align-self: auto;
-        text-align: center;
-        font-family: Source Sans Pro;
-        font-weight: 400;
-        line-height: normal;
-        font-stretch: normal;
-        margin-right: 0;
-        margin-bottom: 0;
-        text-decoration: none;
-    }
-    
-    .homePage-account-button {
-        top: 550px;
-        left: 125px;
-        width: 140px;
-        height: 120px;
-        position: absolute;
-        border-color: transparent;
-        border-radius: 40px;
-        background-color: #FFFFFF;
-    }
-    
-    .homePage-account-button-text {
         top: 28px;
         left: 22px;
         color: #18274E;

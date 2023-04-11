@@ -48,6 +48,26 @@
     position: absolute;
 }
 
+.message-pass {
+    top: 170px;
+    left: 178px;
+    color: rgba(255, 255, 255, 1);
+    width: 453px;
+    height: auto;
+    position: absolute;
+    font-size: 62.43959426879883px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: Montserrat Alternates;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
 /* mobile compatability for displays with width under 414px */
 
 @media(max-width: 414px) {

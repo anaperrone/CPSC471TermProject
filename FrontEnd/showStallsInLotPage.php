@@ -1,5 +1,17 @@
 <?php    
     session_start();
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ParkingData";
+    // initialize the database connection using the DB driver code
+    include_once '../BackEnd/DB.php';
+    $db = new DBConnection();
+    $db->connectToDB($servername, $username, $password, $dbname);
+    $stallArray = $db->DBGetStalls(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
+    $lotArray = $db->DBGetParkingLots($stallArray);
+    // close the database connection
+    $db->closeDBConnection();
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +76,15 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+
+            <?php
+              if(isset($_POST['button'])) {
+                $selectButtonID = $_POST['button'];
+              }
+            ?>
+
+            <span class="message-pass"><span><?php echo "<h1>You selected button with ID: " . $selectButtonID . "</h1>";?></span></span>
+
         </div>
       </div>
     </div>

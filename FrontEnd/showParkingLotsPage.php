@@ -81,14 +81,24 @@
               <?php 
               for($i = 0; $i < sizeof($lotArray); $i++)
               {
-                echo "<button class='button' id='" . $lotArray[$i]->getLotID() . "'> <strong>Address:</strong><br>" . 
+                echo "<button class='button' id='" . $lotArray[$i]->getLotID() . "' onclick = 'selectButton(this.id)'> <strong>Address:</strong><br>" . 
                 $lotArray[$i]->getAddress(). "<br><br> <strong>Size:</strong> " . $lotArray[$i]->getSize()
                 . "</button>";
               }
               ?>
+              <script>
+                function selectButton(buttonID) {
+                  document.getElementById('myForm').elements['button'].value = buttonID;
+                  document.getElementById('myForm').submit();
+                }
+              </script>
+
+              <form id = "myForm" method = "post" action = "showStallsInLotPage.php">
+                <input type = "hidden" name = "button" value="<?php echo $selectButtonID; ?>">
+              </form>
             </a>
             
-            <script>
+            <!-- <script>
             const buttons = document.querySelectorAll('.button');
             buttons.forEach(button => {
             button.addEventListener('click', function() 
@@ -97,7 +107,7 @@
               alert(id);
             });
             });
-            </script>
+            </script> -->
 
           </div>
         </div>

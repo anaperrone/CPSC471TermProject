@@ -281,7 +281,7 @@ class DBConnection extends mysqli {
     }
     // delete function for users
     function DBDeleteFromUsers($theUser){
-        $ID = $theUser->getAccountID()
+        $ID = $theUser->getAccountID();
         $results = mysqli_query($this->connection, "DELETE FROM Users WHERE AccountID = $ID");
         if(!$results){
             echo "Query Failed: ";

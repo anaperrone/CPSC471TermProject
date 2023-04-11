@@ -1,5 +1,22 @@
-<?php    
-    session_start();
+<?php
+  session_start();
+
+  $servername = "localhost";
+  $serverusername = "root";
+  $serverpassword = "";
+  $dbname = "ParkingData";
+  // initialize the database connection using the DB driver code
+  include_once '../BackEnd/DB.php';
+  $db = new DBConnection();
+  $db->connectToDB($servername, $serverusername, $serverpassword, $dbname);
+  
+  // $username = $password = "";
+  $username_err = $password_err = $login_err = "";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -66,27 +83,30 @@
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
             <span class='loginPage-welcomeback-message'><span>welcome back!</span></span>
             
-            <form id = login action='index.php' method='post'>
+            <form id = login action = 'authentication.php' method = 'post'> 
                 <input
                 type='password'
                 placeholder='password'
                 class='loginPage-password-input input'
-                name = 'password'
-                />
+                name = "password"
+                >
                 <input
                 type='text'
                 placeholder='username'
                 class='loginPage-username-input input'
-                name = 'username'
-                />
-                <a href='homePage.php' class='loginPage-log-in-button'>
+                name = "username"
+                >
+                
+                <a href='javascript: login.submit();' class='loginPage-log-in-button'> 
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
                     class='loginPage-log-in-button-shape'
                 />
+
                 <span class='loginPage-log-in-button-text'><span>log in</span></span>
                 </a>
             </form>
+            
             <a href='registerPage.php' class='registerPage-link'> new to ParkShark? sign up here </a>
             <a href='adminLoginPage.php' class='adminLoginPage-link'> are you an admin? click here</a>
         </div>

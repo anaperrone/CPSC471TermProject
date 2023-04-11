@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-
-
 if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"])){
     $uname = $_POST['username'];
     $pass = $_POST['password'];
@@ -15,8 +13,6 @@ if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"])){
         exit();
     }
 }
-
-
 
 else{
     header ("Location: loginPage.php?erro=Failed");

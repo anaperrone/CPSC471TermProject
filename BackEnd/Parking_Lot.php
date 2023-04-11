@@ -32,6 +32,10 @@ class Parking_Lot {
     function getAddress() {
         return($this->Address);
     }
+    // a getter for the Stalls Array
+    function getStalls(){
+        return($this->Stalls);
+    }
     // a function to print the object's info, for only demonstrative perposes
     function printLotData() {
         echo "<br>Lot info: <br>";

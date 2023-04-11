@@ -70,18 +70,41 @@
 
       <div class="showStallsInLotPage-container">
         <div class="showStallsInLotPage-page">
-            <img
-                src="public/playground_assets/Waves.png"
-                class="showStallsInLotPage-waves-background"
-            />
-            <span class="parkshark-logo-text"><span>ParkShark</span></span>
-            <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+          <img
+            src="public/playground_assets/Waves.png"
+            class="showStallsInLotPage-waves-background"
+          />
+          <span class="parkshark-logo-text"><span>ParkShark</span></span>
+          <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+          <?php
+            if(isset($_POST['button'])) {
+            $selectButtonID = $_POST['button'];
+            }
+            $arrayIndex;
+            for($i = 0; $i < sizeof($lotArray); $i++)
+            {
+              if($lotArray[$i]->getLotID() == $selectButtonID)
+              {
+                $arrayIndex = $i;
+              }
+            }
+          ?>
+          <div class="button-container">
+          <a href = "selectVehicleInStallPage.php"> 
             <?php
-              if(isset($_POST['button'])) {
-                $selectButtonID = $_POST['button'];
+              $stallsInLotArray = $lotArray[$arrayIndex]->getStalls();
+              for($i = 0; $i < $lotArray[$arrayIndex]->getSize(); $i++)
+              {
+                if($stallsInLotArray[$i]->getReservationStats() == 0)
+                {
+                  echo "<button class='button' id='" . $stallsInLotArray[$i]->getNumber() . "'> <strong>Number:</strong><br>" . 
+                  $stallsInLotArray[$i]->getNumber(). "<br><br> <strong>Type:</strong> " . $stallsInLotArray[$i]->getType()
+                  . "</button>";
+                }
               }
             ?>
-
+          </a>
+          </div>
         </div>
       </div>
     </div>

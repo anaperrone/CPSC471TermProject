@@ -76,14 +76,11 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-
             <?php
               if(isset($_POST['button'])) {
                 $selectButtonID = $_POST['button'];
               }
             ?>
-
-            <span class="message-pass"><span><?php echo "<h1>You selected button with ID: " . $selectButtonID . "</h1>";?></span></span>
 
         </div>
       </div>

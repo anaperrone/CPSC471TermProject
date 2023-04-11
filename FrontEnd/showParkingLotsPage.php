@@ -77,7 +77,6 @@
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
           
           <div class="button-container">
-            <a href = "showStallsInLotPage.php"> 
               <?php 
               for($i = 0; $i < sizeof($lotArray); $i++)
               {
@@ -86,28 +85,16 @@
                 . "</button>";
               }
               ?>
-              <script>
+            <script>
                 function selectButton(buttonID) {
                   document.getElementById('myForm').elements['button'].value = buttonID;
                   document.getElementById('myForm').submit();
                 }
-              </script>
+            </script>
 
               <form id = "myForm" method = "post" action = "showStallsInLotPage.php">
-                <input type = "hidden" name = "button" value="<?php echo $selectButtonID; ?>">
+                <input type = "hidden" name = "button" id = "">
               </form>
-            </a>
-            
-            <!-- <script>
-            const buttons = document.querySelectorAll('.button');
-            buttons.forEach(button => {
-            button.addEventListener('click', function() 
-            {
-              const id = this.id;
-              alert(id);
-            });
-            });
-            </script> -->
 
           </div>
         </div>

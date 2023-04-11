@@ -65,7 +65,7 @@ CREATE TABLE `Stalls` (
 --
 
 INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES 
-(123, 1, 'Handicap', 0),
+(123, 1, 'Handicap', 1),
 (123, 2, 'Handicap', 0),
 (123, 3, 'Standard', 0),
 (123, 4, 'Standard', 0),
@@ -83,7 +83,7 @@ INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES
 (980, 6, 'Standard', 0),
 (980, 7, 'Standard', 0),
 (980, 8, 'Standard', 0),
-(980, 9, 'Standard', 0),
+(980, 9, 'Standard', 1),
 (980, 10, 'Standard', 0),
 (980, 11, 'Standard', 0),
 (980, 12, 'Standard', 0),

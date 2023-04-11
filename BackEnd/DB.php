@@ -52,6 +52,18 @@ class DBConnection extends mysqli {
             echo "Success";
         }
     }
+    // delete function for parking lots
+    function DBDeleteFromParkingLots($theLot){
+        $ID = $theLot->getLotID();
+        $results = mysqli_query($this->connection, "DELETE FROM Parking_Lots WHERE LotID = $ID");
+        if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        else{
+            echo "Success";
+        }
+    }
     // reciever function for stalls
     function DBGetStalls() {
         $array = [];
@@ -77,6 +89,18 @@ class DBConnection extends mysqli {
         $Type = $theStall->getType();
         $IsReserved = $theStall->getReservationStats(); 
         $results = mysqli_query($this->connection, "INSERT INTO Stalls (LotID, Number, Type, Reserved) VALUES ('$LotID', '$Number', '$Type', '$IsReserved')");
+        if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        else{
+            echo "Success";
+        }
+    }
+    // delete function for stalls
+    function DBDeleteFromStalls($theStall){
+        $ID = $theStall->getNumber();
+        $results = mysqli_query($this->connection, "DELETE FROM Stalls WHERE Number = $ID");
         if(!$results){
             echo "Query Failed: ";
             exit();
@@ -118,6 +142,18 @@ class DBConnection extends mysqli {
         $Lot = $theCar->getLot();
         $OID = $theCar->getOwnerID();
         $results = mysqli_query($this->connection, "INSERT INTO Vehicles (PlateNumber, Model, Make, Colour, Year, ParkedInLot, ParkedInStall, OwnerID) VALUES ('$PlateNum', '$Model', '$Make', '$Colour', '$Year', '$Lot', '$Stall', '$OID')");
+        if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        else{
+            echo "Success";
+        }
+    }
+    // delete function for vehicles
+    function DBDeleteFromVehicles($theCar){
+        $ID = $theCar->getPlatNum();
+        $results = mysqli_query($this->connection, "DELETE FROM Vehicles WHERE PlateNumber = $ID");
         if(!$results){
             echo "Query Failed: ";
             exit();
@@ -235,6 +271,18 @@ class DBConnection extends mysqli {
         $CVV = $theUser->getCVV();
 
         $results = mysqli_query($this->connection, "INSERT INTO Users (FName, LName, AccountID, CardNum, Passcode, CVV) VALUES ('$F', '$L', '$ID', '$C', '$P', '$CVV')");
+        if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        else{
+            echo "Success";
+        }
+    }
+    // delete function for users
+    function DBDeleteFromUsers($theUser){
+        $ID = $theUser->getAccountID()
+        $results = mysqli_query($this->connection, "DELETE FROM Users WHERE AccountID = $ID");
         if(!$results){
             echo "Query Failed: ";
             exit();

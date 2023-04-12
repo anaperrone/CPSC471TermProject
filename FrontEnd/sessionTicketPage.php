@@ -11,8 +11,6 @@
     $db->connectToDB($servername, $username, $password, $dbname);
     $stallArray = $db->DBGetStalls(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
     $lotArray = $db->DBGetParkingLots($stallArray);
-    // close the database connection
-    $db->closeDBConnection();
 ?>
 
 <!DOCTYPE html>
@@ -128,10 +126,18 @@
                 var dateTime = date + ' ' + time;
                 document.querySelector('.ticket-sessionExpirationTime').innerHTML = '<span><b>Session Expiration Time:</b> ' + dateTime + '</span>';
               }
-
               calculateSessionExpirationTime();
+              <?php
+                include_once '../BackEnd/Ticket.php';
+                $currentTime = date('Y-m-d H:i:s');
+                $endTime = date('Y-m-d H:i:s', strtotime('+' .$selectedSessionTime. 'hours', strtotime($currentTime)));
+                $num = rand(100000, 999999);
+                $theTicket = new Ticket($num, $selectedLotID, $selectedLotAddr, $selectedVehicle, $currentTime, $endTime, 'Fare', $calculatedPrice);
+                $db->DBInsertIntoTickets($theTicket);
+                // close the database connection
+                $db->closeDBConnection();
+              ?>
             </script>
-
         </div>
       </div>
     </div>

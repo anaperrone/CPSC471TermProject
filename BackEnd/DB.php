@@ -215,7 +215,8 @@ class DBConnection extends mysqli {
             $End = $row['StampEndTime'];
             $Type = $row['Type'];
             $Amount = $row['Amount'];
-            $array[] = new Ticket($Number, $LotID, $LotAddress, $PlateNum, $Start, $End, $Type, $Amount);
+            $UserID = $row['UserID'];
+            $array[] = new Ticket($Number, $LotID, $LotAddress, $PlateNum, $Start, $End, $Type, $Amount, $UserID);
         }
         return($array);
     }
@@ -229,8 +230,8 @@ class DBConnection extends mysqli {
         $End = $theTicket->getTimestampEnd();
         $Type = $theTicket->getType();
         $amount = $theTicket->getAmount();
-        
-        $results = mysqli_query($this->connection, "INSERT INTO Tickets (Number, lotID, lotAddress, plateNum, StampStartTime, StampEndTime, Type, Amount) VALUES ('$N', '$ID', '$LotAdd', '$PlatNum', '$Start', '$End', '$Type', '$amount')");
+        $userID = $theTicket->getUserID();
+        $results = mysqli_query($this->connection, "INSERT INTO Tickets (Number, lotID, lotAddress, plateNum, StampStartTime, StampEndTime, Type, Amount, UserID) VALUES ('$N', '$ID', '$LotAdd', '$PlatNum', '$Start', '$End', '$Type', '$amount', '$userID')");
         if(!$results){
             echo "Query Failed: ";
             exit();

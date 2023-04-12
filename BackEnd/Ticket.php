@@ -9,8 +9,9 @@ class Ticket {
     private $TimestampEnd;
     private $Type;
     private $Amount;
+    private $UserID;
     // default constructor
-    public function __construct($Num, $ID, $AD, $PN, $ST, $EN, $Ty, $A) {
+    public function __construct($Num, $ID, $AD, $PN, $ST, $EN, $Ty, $A, $UID) {
         $this->Number = $Num;
         $this->LotID = $ID;
         $this->LotAddress = $AD;
@@ -19,6 +20,7 @@ class Ticket {
         $this->TimestampEnd = $EN;
         $this->Type = $Ty;
         $this->Amount = $A;
+        $this->UserID = $UID;
         return($this);
     }
     // a getter for the Number parameter
@@ -53,6 +55,9 @@ class Ticket {
     function getAmount(){
         return($this->Amount);
     }
-    
+    // a getter for the userId parameter
+    function getUserID(){
+        return($this->UserID);
+    }
 }
 ?>

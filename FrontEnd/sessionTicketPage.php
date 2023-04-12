@@ -7,10 +7,21 @@
     $dbname = "ParkingData";
     // initialize the database connection using the DB driver code
     include_once '../BackEnd/DB.php';
+    include_once '../BackEnd/User.php';
     $db = new DBConnection();
     $db->connectToDB($servername, $username, $password, $dbname);
     $stallArray = $db->DBGetStalls(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
     $lotArray = $db->DBGetParkingLots($stallArray);
+    $carArray = $db->DBGetVehicles();
+    $userArray = $db->DBGetUsers($carArray);
+    for($i = 0; $i < sizeof($userArray); $i++) {
+      if($userArray[$i]->getUserName() == $post_data)
+      {
+        $arrayIndex = $i;
+      }
+    }
+    $UserID = $userArray[$arrayIndex]->getAccountID();
+    echo $UserID;
 ?>
 
 <!DOCTYPE html>
@@ -132,7 +143,7 @@
                 $currentTime = date('Y-m-d H:i:s');
                 $endTime = date('Y-m-d H:i:s', strtotime('+' .$selectedSessionTime. 'hours', strtotime($currentTime)));
                 $num = rand(100000, 999999);
-                $theTicket = new Ticket($num, $selectedLotID, $selectedLotAddr, $selectedVehicle, $currentTime, $endTime, 'Fare', $calculatedPrice);
+                $theTicket = new Ticket($num, $selectedLotID, $selectedLotAddr, $selectedVehicle, $currentTime, $endTime, 'Fare', $calculatedPrice, $UserID);
                 $db->DBInsertIntoTickets($theTicket);
                 // close the database connection
                 $db->closeDBConnection();

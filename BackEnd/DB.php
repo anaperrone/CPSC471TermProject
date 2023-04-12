@@ -6,18 +6,16 @@ class DBConnection extends mysqli {
     // default constructor
     public function __construct(){
         $this->isConnected = false;
-        echo("Built<br>");
     }
     // a function to connect to a database
     function connectToDB($serverName, $username, $password, $db) {
         $this->connection = mysqli_connect($serverName, $username, $password, $db);
         
-        if($connection->connect_error){
+        if($this->connection->connect_error){
             echo("Connection Failed<br>");
             $this->isConnected = false;
         }
         else {
-            echo("Connection Successful<br>");
             $this->isConnected = true;
         }
     }
@@ -253,11 +251,13 @@ class DBConnection extends mysqli {
             include_once 'User.php';
             $F = $row['FName'];
             $L = $row['LName'];
+            $UN = $row['Username'];
+            $PA = $row['Password'];
             $AID = $row['AccountID'];
             $C = $row['CardNum'];
             $P = $row['Passcode'];
             $CVV = $row['CVV'];
-            $array[] = new User($F, $L, $AID, $C, $P, $CVV, $VArray);
+            $array[] = new User($F, $L, $UN, $PA, $AID, $C, $P, $CVV, $VArray);
         }
         return($array);
     }
@@ -265,12 +265,14 @@ class DBConnection extends mysqli {
     function DBInsertIntoUsers($theUser){
         $F = $theUser->getFirstName();
         $L = $theUser->getLastName();
+        $UN = $theUser->getUserName();
+        $PA = $theUser->getPassword();
         $ID = $theUser->getAccountID();
         $C = $theUser->getCardNum();
         $P = $theUser->getPasscode();
         $CVV = $theUser->getCVV();
 
-        $results = mysqli_query($this->connection, "INSERT INTO Users (FName, LName, AccountID, CardNum, Passcode, CVV) VALUES ('$F', '$L', '$ID', '$C', '$P', '$CVV')");
+        $results = mysqli_query($this->connection, "INSERT INTO Users (FName, LName, Username, Password, AccountID, CardNum, Passcode, CVV) VALUES ('$F', '$L', '$UN', '$PA', '$ID', '$C', '$P', '$CVV')");
         if(!$results){
             echo "Query Failed: ";
             exit();
@@ -303,7 +305,8 @@ class DBConnection extends mysqli {
             include_once 'User.php';
             $ID = $row['AdminID'];
             $N = $row['Name'];
-            $array[] = new Admin($ID, $N);
+            $P = $row['Password'];
+            $array[] = new Admin($ID, $N, $P);
         }
         return($array);
     }
@@ -311,8 +314,9 @@ class DBConnection extends mysqli {
     function DBInsertIntoAdmins($theAdmin){
         $ID = $theAdmin->getAdminID();
         $N = $theAdmin->getName();
+        $P = $theAdmin->getPassword();
 
-        $results = mysqli_query($this->connection, "INSERT INTO Admins (AdminID, Name) VALUES ('$ID', '$N')");
+        $results = mysqli_query($this->connection, "INSERT INTO Admins (AdminID, Name, Password) VALUES ('$ID', '$N', '$P')");
         if(!$results){
             echo "Query Failed: ";
             exit();

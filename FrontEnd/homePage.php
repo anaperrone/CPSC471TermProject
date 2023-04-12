@@ -65,6 +65,15 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+            <a href = 'loginPage.php' class = 'homePage-logout-button button'>
+              <img
+                src="public/playground_assets/vector125-z04h.svg"
+                alt="Vector125"
+                class="homePage-logout-button-arrow "
+              />
+              <span class="homePage-logout-button-text">log out</span>
+              </span>
+          </a>
             <span class='homePage-whereto-message'><span>Where to?</span></span>
             <a href='showParkingLotsPage.php' class='homePage-parkinglot-button'> 
               <button type = 'submit'>

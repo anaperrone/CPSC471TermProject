@@ -26,7 +26,8 @@ if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]) && i
     $pass = $_POST['password'];
     $check = $_POST['confirmed'];
     foreach($UserArray as $User){
-        if($uname === ($User->getUserName()) && $pass === ($User->getPassword())){
+        if($uname === ($User->getUserName())){
+            $_SESSION["errorMessage"] .= "this account already exists, please try again";
             header ("Location: registerPage.php?erro=Account Already Exists");
             exit();
         }
@@ -35,6 +36,7 @@ if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]) && i
         header ("Location: paymentPage.php");
         exit();
     }
+    $_SESSION["errorMessage"] .= "your passwords do not match, please try again";
     header ("Location: registerPage.php?erro=Passwords Don't Match");
     exit();
     

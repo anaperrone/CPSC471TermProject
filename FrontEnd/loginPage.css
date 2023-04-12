@@ -99,6 +99,15 @@
     border-bottom-width: 10px;
 }
 
+.loginPage-errorMessage {
+    font-size: 30px;
+    font-family: Source Sans Pro;
+    font-weight: 500;
+    top: 20px;
+    align-self: center;
+    color:crimson;
+}
+
 .loginPage-log-in-button { /*this is the Log In button "container" */
     top: 665px;
     left: 45%;

@@ -2,6 +2,12 @@
     session_start();
 ?>
 
+<span class="registerPage-errorMessage"><span><?php echo $_SESSION["errorMessage"]?></span></span>
+
+<?php
+  $_SESSION["errorMessage"] = "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

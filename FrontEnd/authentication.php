@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['post_data'] = $_POST['username'];
+$_SESSION["errorMessage"] = "";
 
 // the creds for the database; change as needed
 $servername = "localhost";
@@ -28,6 +29,7 @@ if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"])){
             exit();
         }
     }
+    $_SESSION["errorMessage"] .= "incorrect username or password, please try again";
     header ("Location: loginPage.php?erro=Wrong");
     exit();
     

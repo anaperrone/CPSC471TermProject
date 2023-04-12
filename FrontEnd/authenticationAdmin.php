@@ -2,8 +2,8 @@
 session_start();
 
 // the creds for the database; change as needed
-$servername = "localhost:4306";
-$username = "EWinters";
+$servername = "localhost";
+$username = "root";
 $password = "";
 $dbname = "ParkingData";
 // initialize the database connection using the DB driver code
@@ -26,6 +26,7 @@ if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"])){
             exit();
         }
     }
+    $_SESSION["errorMessage"] .= "incorrect username or password, please try again";
     header ("Location: adminLoginPage.php?erro=Wrong");
     exit();
 }

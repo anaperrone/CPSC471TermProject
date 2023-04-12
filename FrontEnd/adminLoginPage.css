@@ -48,6 +48,15 @@
     position: absolute;
 }
 
+.adminLoginPage-errorMessage {
+    font-size: 30px;
+    font-family: Source Sans Pro;
+    font-weight: 500;
+    top: 20px;
+    align-self: center;
+    color:crimson;
+}
+
 .adminLoginPage-welcome-message {
     top: 300px;
     left: 39%;

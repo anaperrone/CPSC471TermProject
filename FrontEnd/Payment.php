@@ -6,8 +6,8 @@ $F = $_SESSION['fname'];
 $L = $_SESSION['lname'];
 
 // the creds for the database; change as needed
-$servername = "localhost:4306";
-$username = "EWinters";
+$servername = "localhost";
+$username = "root";
 $password = "";
 $dbname = "ParkingData";
 // initialize the database connection using the DB driver code

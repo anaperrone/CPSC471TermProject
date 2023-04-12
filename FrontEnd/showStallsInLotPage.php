@@ -78,6 +78,8 @@
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
           <?php
             $selectButtonID = $_POST['lotID'];
+            $_SESSION['lotID'] = $_POST['lotID'];
+            $_SESSION['lotAddress'] = $_POST['address'];
             $arrayIndex;
             for($i = 0; $i < sizeof($lotArray); $i++)
             {

@@ -1,7 +1,6 @@
 <?php    
     session_start();
     $post_data = $_SESSION['post_data']; // get the username from here
-    echo $post_data;
 
     $servername = "localhost";
     $username = "root";
@@ -90,18 +89,26 @@
             }
           ?>
           <div class="button-container">
-            <a href = "selectParkingTimePage.php">
               <?php
                 $vehiclesInUserArray = $userArray[$arrayIndex]->getVehicles();
                 for($i = 0; $i < sizeof($vehiclesInUserArray); $i++)
                 {
-                  echo "<button class='button' id='" . $vehiclesInUserArray[$i]->getPlatnum() . "'> <strong>Plate number:</strong><br>" . 
+                  echo "<button class='button' id='" . $vehiclesInUserArray[$i]->getPlatnum() . "'onclick = 'selectButton(this.id)'> <strong>Plate number:</strong><br>" . 
                   $vehiclesInUserArray[$i]->getPlatnum(). "<br><br> <strong>Car:</strong> " . $vehiclesInUserArray[$i]->getYear() . " " . 
                   $vehiclesInUserArray[$i]->getMake(). " " . $vehiclesInUserArray[$i]->getModel() . "<br><br><strong>Colour:</strong> " . 
                   $vehiclesInUserArray[$i]->getColour() . "</button>";
                 }
               ?>
-            </a>
+              <script>
+                function selectButton(buttonLicensePlate) {
+                  document.getElementById('vehicleForm').elements['button'].value = buttonLicensePlate;
+                  document.getElementById('vehicleForm').submit();
+                }
+            </script>
+
+            <form id = "vehicleForm" method = "post" action = "selectParkingTimePage.php">
+                <input type="hidden" name="button" id="">
+            </form>
           </div>
         </div>
       </div>

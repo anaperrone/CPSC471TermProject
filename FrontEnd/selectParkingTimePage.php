@@ -17,6 +17,8 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
   }
+
+  $_SESSION['vehicle'] = $_POST['button'];
 ?>
 
 <!DOCTYPE html>

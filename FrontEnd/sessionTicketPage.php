@@ -89,9 +89,9 @@
 
             <span class='sessionTicketPage-message'><span>payment successful!</span></span>
             <?php
-            $selectedLotID = $_POST['lotID'];
-            $selectedLotAddr = $_POST['lotAddress'];
-            $selectedVehicle = $_POST['userVehicle'];
+            $selectedLotID = $_SESSION['lotID'];
+            $selectedLotAddr = $_SESSION['lotAddress'];
+            $selectedVehicle = $_SESSION['vehicle'];
             $selectedSessionTime = $_POST['hours'];
             $calculatedPrice = $_POST['total'];  
             ?>

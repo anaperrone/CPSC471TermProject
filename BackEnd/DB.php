@@ -53,7 +53,7 @@ class DBConnection extends mysqli {
     // delete function for parking lots
     function DBDeleteFromParkingLots($theLot){
         $ID = $theLot->getLotID();
-        $results = mysqli_query($this->connection, "DELETE FROM Parking_Lots WHERE LotID = $ID");
+        $results = mysqli_query($this->connection, "DELETE FROM Parking_Lots WHERE LotID = '$ID'");
         if(!$results){
             echo "Query Failed: ";
             exit();
@@ -98,7 +98,7 @@ class DBConnection extends mysqli {
     // delete function for stalls
     function DBDeleteFromStalls($theStall){
         $ID = $theStall->getNumber();
-        $results = mysqli_query($this->connection, "DELETE FROM Stalls WHERE Number = $ID");
+        $results = mysqli_query($this->connection, "DELETE FROM Stalls WHERE Number = '$ID'");
         if(!$results){
             echo "Query Failed: ";
             exit();
@@ -151,7 +151,7 @@ class DBConnection extends mysqli {
     // delete function for vehicles
     function DBDeleteFromVehicles($theCar){
         $ID = $theCar->getPlatNum();
-        $results = mysqli_query($this->connection, "DELETE FROM Vehicles WHERE PlateNumber = $ID");
+        $results = mysqli_query($this->connection, "DELETE FROM Vehicles WHERE PlateNumber = '$ID'");
         if(!$results){
             echo "Query Failed: ";
             exit();
@@ -284,7 +284,7 @@ class DBConnection extends mysqli {
     // delete function for users
     function DBDeleteFromUsers($theUser){
         $ID = $theUser->getAccountID();
-        $results = mysqli_query($this->connection, "DELETE FROM Users WHERE AccountID = $ID");
+        $results = mysqli_query($this->connection, "DELETE FROM Users WHERE AccountID = '$ID'");
         if(!$results){
             echo "Query Failed: ";
             exit();

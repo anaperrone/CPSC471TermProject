@@ -188,8 +188,8 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`FName`, `LName`, `Username`, `Password`, `AccountID`, `CardNum`, `Passcode`, `CVV`) VALUES
-('Hamza', 'Lodhi', 'Username', 'Password', '54321', '1234567890123456', '11/24', '230'), # passcode is actually expiry date
-('TestName', 'TestLast', 'Username', 'Password', 12356, 1111222233334444, '11/24', 123);
+('Hamza', 'Lodhi', 'Username', 'Password', 54321, 1234567890123456, '11/24', 230), # passcode is actually expiry date
+('TestName', 'TestLast', 'User', 'Pass', 12356, 1111222233334444, '11/24', 123);
 -- --------------------------------------------------------
 
 --

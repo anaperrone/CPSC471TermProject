@@ -1,5 +1,8 @@
 <?php    
     session_start();
+    $post_data = $_SESSION['post_data']; // get the username from here
+    echo $post_data;
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -77,9 +80,9 @@
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
           <?php
-            $selectButtonID = $_POST['lotID'];
-            $_SESSION['lotID'] = $_POST['lotID'];
-            $_SESSION['lotAddress'] = $_POST['address'];
+            if(isset($_POST['button'])) {
+            $selectButtonID = $_POST['button'];
+            }
             $arrayIndex;
             for($i = 0; $i < sizeof($lotArray); $i++)
             {

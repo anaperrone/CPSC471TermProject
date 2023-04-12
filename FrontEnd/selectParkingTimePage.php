@@ -1,5 +1,7 @@
 <?php
   session_start();
+  $post_data = $_SESSION['post_data']; // get the username from here
+  echo $post_data;
 
   $servername = "localhost";
   $serverusername = "root";
@@ -17,8 +19,6 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
   }
-
-  $_SESSION['vehicle'] = $_POST['button'];
 ?>
 
 <!DOCTYPE html>

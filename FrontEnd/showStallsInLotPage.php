@@ -1,20 +1,19 @@
 <?php    
-    session_start();
-    $post_data = $_SESSION['post_data']; // get the username from here
-    echo $post_data;
+  session_start();
+  $post_data = $_SESSION['post_data']; // get the username from here
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "ParkingData";
-    // initialize the database connection using the DB driver code
-    include_once '../BackEnd/DB.php';
-    $db = new DBConnection();
-    $db->connectToDB($servername, $username, $password, $dbname);
-    $stallArray = $db->DBGetStalls(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
-    $lotArray = $db->DBGetParkingLots($stallArray);
-    // close the database connection
-    $db->closeDBConnection();
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "ParkingData";
+  // initialize the database connection using the DB driver code
+  include_once '../BackEnd/DB.php';
+  $db = new DBConnection();
+  $db->connectToDB($servername, $username, $password, $dbname);
+  $stallArray = $db->DBGetStalls(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
+  $lotArray = $db->DBGetParkingLots($stallArray);
+  // close the database connection
+  $db->closeDBConnection();
 ?>
 
 <!DOCTYPE html>
@@ -80,9 +79,9 @@
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
           <?php
-            if(isset($_POST['button'])) {
-            $selectButtonID = $_POST['button'];
-            }
+            $selectButtonID = $_POST['lotID'];
+            $_SESSION['lotID'] = $_POST['lotID'];
+            $_SESSION['lotAddress'] = $_POST['address'];
             $arrayIndex;
             for($i = 0; $i < sizeof($lotArray); $i++)
             {

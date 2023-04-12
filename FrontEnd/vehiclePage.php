@@ -157,7 +157,7 @@
             setTimeout(function()
             {
               window.location.href = "homePage.php";
-            }, 0.5);
+            }, 1000);
             });     
           </script> 
         </div>

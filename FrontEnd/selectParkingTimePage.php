@@ -132,7 +132,7 @@
               function calculateTotal() {
                 var quantity = document.getElementById("hours").value;
                 var total = quantity * price;
-                document.getElementById("total").textContent = "your total will be: $" + total;
+                document.getElementById("total").textContent = "your total will be $" + total;
               }
 
               //function to show pay button once time has been chosen and price has been calculated
@@ -149,7 +149,6 @@
                 //submit the form
                 document.getElementById("paymentForm").submit();
               });
-              
             </script>
             
         </div>

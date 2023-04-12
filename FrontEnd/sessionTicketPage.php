@@ -76,24 +76,35 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+
+            <a href = 'homePage.php' class = 'homePage-button button'>
+              <img
+                src="public/playground_assets/homePageIcon.png"
+                alt="Vector125"
+                class="homePage-icon "
+              />
+              <span class="homePage-button-text">go to home page</span>
+              </span>
+          </a>
+
             <span class='sessionTicketPage-message'><span>payment successful!</span></span>
             <?php
             $selectedLotID = $_POST['lotID'];
             $selectedLotAddr = $_POST['lotAddress'];
-            // $selectedVehicle = $_POST['userVehicle'];
-            $selectedSessionTime = $_POST['sessionTime'];
-            $calculatedPrice = $_POST['sessionPrice'];  
+            $selectedVehicle = $_POST['userVehicle'];
+            $selectedSessionTime = $_POST['hours'];
+            $calculatedPrice = $_POST['total'];  
             ?>
 
             <div class="ticket-box">
               <span class='ticket-title'><span>parkshark receipt</span></span>
               <span class='ticket-date'><span id='datetime'></span></span>
-              <span class='ticket-lotID'><span>Parking Lot ID: <?php echo $selectedLotID; ?> </span></span>
-              <span class='ticket-lotAddr'><span>Parking Lot Address: <?php echo $selectedLotAddr; ?></span></span>
-              <span class='ticket-vehicle'><span>Vehicle Registered: <?php echo $selectedVehicle; ?></span></span>
-              <span class='ticket-sessionTime'><span>Session Time: <?php echo $selectedSessionTime; ?></span></span>
-              <span class='ticket-sessionExpirationTime'><span>Session Expiration Time:</span></span>
-              <span class='ticket-sessionPrice'><span>Session Price: <?php echo $calculatedPrice; ?></span></span>
+              <span class='ticket-lotID'><span><b>Parking Lot ID:</b> <?php echo $selectedLotID; ?> </span></span>
+              <span class='ticket-lotAddr'><span><b>Parking Lot Address:</b> <?php echo $selectedLotAddr; ?></span></span>
+              <span class='ticket-vehicle'><span><b>Vehicle Registered:</b> <?php echo $selectedVehicle; ?></span></span>
+              <span class='ticket-sessionTime'><span><b>Session Time:</b> <?php echo $selectedSessionTime; ?> hours</span></span>
+              <span class='ticket-sessionExpirationTime'><span></span></span>
+              <span class='ticket-sessionPrice'><span><b>Session Price:</b> <?php echo $calculatedPrice; ?></span></span>
             </div>
 
             <script>
@@ -104,8 +115,20 @@
                   var dateTime = date + ' ' + time;
                   document.querySelector('#datetime').textContent = dateTime;
               }
-
               displayDateTime();
+
+              function calculateSessionExpirationTime() {
+                var selectedSessionTime = <?php echo $selectedSessionTime; ?>; // get selected session time from PHP variable
+                var currentTime = new Date(); // get current local time
+                var expirationTime = new Date(currentTime.getTime() + selectedSessionTime * 60 * 60 * 1000); // add selected session time to current time
+
+                var date = expirationTime.toLocaleDateString();
+                var time = expirationTime.toLocaleTimeString();
+                var dateTime = date + ' ' + time;
+                document.querySelector('.ticket-sessionExpirationTime').innerHTML = '<span><b>Session Expiration Time:</b> ' + dateTime + '</span>';
+              }
+
+              calculateSessionExpirationTime();
             </script>
 
         </div>

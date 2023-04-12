@@ -207,6 +207,15 @@
         text-decoration: none;
     }
 
+    .loginPage-errorMessage {
+        font-size: 20px;
+        font-family: Source Sans Pro;
+        font-weight: 500;
+        top: 20px;
+        align-self: center;
+        color:crimson;
+    }
+
     .adminLoginPage-username-input {
         top: 290px;
         left: 20px;

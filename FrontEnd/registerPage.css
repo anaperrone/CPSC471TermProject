@@ -67,6 +67,14 @@
     margin-bottom: 0;
     text-decoration: none;
 }
+.registerPage-errorMessage {
+    font-size: 30px;
+    font-family: Source Sans Pro;
+    font-weight: 500;
+    top: 20px;
+    align-self: center;
+    color:crimson;
+}
 .registerPage-fname-input {
     top: 409px;
     left: 36%;

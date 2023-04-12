@@ -66,43 +66,48 @@
   </head>
   <body>
     <div>
-      <link href="./showStallsInLotPage.css" rel="stylesheet" />
+      <link href="./sessionTicketPage.css" rel="stylesheet" />
 
-      <div class="showStallsInLotPage-container">
-        <div class="showStallsInLotPage-page">
-          <img
+      <div class="sessionTicketPage-container">
+        <div class="sessionTicketPage-page">
+            <img
             src="public/playground_assets/Waves.png"
-            class="showStallsInLotPage-waves-background"
-          />
-          <span class="parkshark-logo-text"><span>ParkShark</span></span>
-          <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-          <?php
-            $selectButtonID = $_POST['lotID'];
-            $arrayIndex;
-            for($i = 0; $i < sizeof($lotArray); $i++)
-            {
-              if($lotArray[$i]->getLotID() == $selectButtonID)
-              {
-                $arrayIndex = $i;
-              }
-            }
-          ?>
-          <div class="button-container">
-          <a href = "selectVehicleInStallPage.php"> 
+            class="sessionTicketPage-waves-background"
+            />
+            <span class="parkshark-logo-text"><span>ParkShark</span></span>
+            <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+            <span class='sessionTicketPage-message'><span>payment successful!</span></span>
             <?php
-              $stallsInLotArray = $lotArray[$arrayIndex]->getStalls();
-              for($i = 0; $i < $lotArray[$arrayIndex]->getSize(); $i++)
-              {
-                if($stallsInLotArray[$i]->getReservationStats() == 0)
-                {
-                  echo "<button class='button' id='" . $stallsInLotArray[$i]->getNumber() . "'> <strong>Number:</strong><br>" . 
-                  $stallsInLotArray[$i]->getNumber(). "<br><br> <strong>Type:</strong> " . $stallsInLotArray[$i]->getType()
-                  . "</button>";
-                }
-              }
+            $selectedLotID = $_POST['lotID'];
+            $selectedLotAddr = $_POST['lotAddress'];
+            // $selectedVehicle = $_POST['userVehicle'];
+            $selectedSessionTime = $_POST['sessionTime'];
+            $calculatedPrice = $_POST['sessionPrice'];  
             ?>
-          </a>
-          </div>
+
+            <div class="ticket-box">
+              <span class='ticket-title'><span>parkshark receipt</span></span>
+              <span class='ticket-date'><span id='datetime'></span></span>
+              <span class='ticket-lotID'><span>Parking Lot ID: <?php echo $selectedLotID; ?> </span></span>
+              <span class='ticket-lotAddr'><span>Parking Lot Address: <?php echo $selectedLotAddr; ?></span></span>
+              <span class='ticket-vehicle'><span>Vehicle Registered: <?php echo $selectedVehicle; ?></span></span>
+              <span class='ticket-sessionTime'><span>Session Time: <?php echo $selectedSessionTime; ?></span></span>
+              <span class='ticket-sessionExpirationTime'><span>Session Expiration Time:</span></span>
+              <span class='ticket-sessionPrice'><span>Session Price: <?php echo $calculatedPrice; ?></span></span>
+            </div>
+
+            <script>
+              function displayDateTime() {
+                  var today = new Date();
+                  var date = today.toLocaleDateString();
+                  var time = today.toLocaleTimeString();
+                  var dateTime = date + ' ' + time;
+                  document.querySelector('#datetime').textContent = dateTime;
+              }
+
+              displayDateTime();
+            </script>
+
         </div>
       </div>
     </div>

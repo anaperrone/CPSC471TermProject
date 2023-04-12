@@ -80,20 +80,24 @@
               <?php 
               for($i = 0; $i < sizeof($lotArray); $i++)
               {
-                echo "<button class='button' id='" . $lotArray[$i]->getLotID() . "' onclick = 'selectButton(this.id)'> <strong>Address:</strong><br>" . 
-                $lotArray[$i]->getAddress(). "<br><br> <strong>Size:</strong> " . $lotArray[$i]->getSize()
-                . "</button>";
+                $lotID = $lotArray[$i]->getLotID();
+                $address = $lotArray[$i]->getAddress();
+                echo "<button class='button' id='$lotID' onclick='selectButton(\"$lotID\", \"$address\")'>
+                <strong>Address:</strong><br>$address<br><br><strong>Size:</strong> " . $lotArray[$i]->getSize() . "
+                </button>";
               }
               ?>
             <script>
-                function selectButton(buttonID) {
-                  document.getElementById('myForm').elements['button'].value = buttonID;
-                  document.getElementById('myForm').submit();
+                function selectButton(buttonID, buttonAddress) {
+                  document.getElementById('parkingLotForm').elements['lotID'].value = buttonID;
+                  document.getElementById('parkingLotForm').elements['lotAddress'].value = buttonAddress;
+                  document.getElementById('parkingLotForm').submit();
                 }
             </script>
 
-              <form id = "myForm" method = "post" action = "showStallsInLotPage.php">
-                <input type = "hidden" name = "button" id = "">
+              <form id = "parkingLotForm" method = "post" action = "showStallsInLotPage.php">
+                <input type="hidden" name="lotID" id="">
+                <input type="hidden" name="lotAddress" id="">
               </form>
 
           </div>

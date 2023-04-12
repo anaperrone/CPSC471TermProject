@@ -19,7 +19,7 @@ class User {
         if(is_array($VArray)) { // if you don't want to add vehicles to a new user (hasn't registered any) just send a 0 in place of the $VArray parameter to make this statement equate to false
             foreach($VArray as $V){
                 $code = $V->getOwnerID();
-                if($code = $this->AccountID){
+                if($code == $this->AccountID){
                     $this->Vehicles[] = $V;
                 }
             }

@@ -118,10 +118,10 @@ CREATE TABLE `Vehicles` (
 -- Dumping data for 'Vehicles'
 --
 
-INSERT INTO `Vehicles` (`PlateNumber`, `Model`, `Make`, `Colour`, 'Year', 'ParkedInLot', 'ParkedInStall', 'OwnerID') VALUES 
-('ABC1234', 'Altima', 'Nissan', 'Red', '2022', NULL, NULL, 12345)
-('CBA4321', 'Corolla', 'Toyota', 'White', '2001', NULL, NULL, 54321)
-('XYZ1111', 'Focus', 'Ford', 'Blue', '2018', NULL, NULL, 54321)
+INSERT INTO `Vehicles` (`PlateNumber`, `Model`, `Make`, `Colour`, `Year`, `ParkedInLot`, `ParkedInStall`, `OwnerID`) VALUES 
+('ABC1234', 'Altima', 'Nissan', 'Red', '2022', NULL, NULL, '12345'),
+('CBA4321', 'Prius', 'Toyota', 'White', '2023', NULL, NULL, '54321'),
+('XYZ1111', 'Focus', 'Ford', 'Blue', '2018', NULL, NULL, '54321');
 
 -- --------------------------------------------------------
 
@@ -184,6 +184,9 @@ CREATE TABLE `Users` (
 --
 -- Dumping data for users
 --
+
+INSERT INTO `Users` (`FName`, `Lname`, `AccountID`, `CardNum`, `Passcode`, `CVV`) VALUES 
+('Hamza', 'Lodhi', '54321', '1234567890123456', 'hello', '230');
 
 -- --------------------------------------------------------
 

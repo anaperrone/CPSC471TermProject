@@ -81,7 +81,6 @@
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
           <?php
-            $AccountId = '54321'; //Need to get account ID from session variable instead
             for($i = 0; $i < sizeof($userArray); $i++)
             {
               if($userArray[$i]->getUserName() == $post_data)

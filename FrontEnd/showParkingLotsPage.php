@@ -92,14 +92,14 @@
             <script>
                 function selectButton(buttonID, buttonAddress) {
                   document.getElementById('parkingLotForm').elements['lotID'].value = buttonID;
-                  document.getElementById('parkingLotForm').elements['lotAddress'].value = buttonAddress;
+                  document.getElementById('parkingLotForm').elements['address'].value = buttonAddress;
                   document.getElementById('parkingLotForm').submit();
                 }
             </script>
 
             <form id = "parkingLotForm" method = "post" action = "showStallsInLotPage.php">
-                <input type="hidden" name="lotID" id="">
-                <input type="hidden" name="lotAddress" id="">
+                <input type="hidden" name="lotID" id="lotID">
+                <input type="hidden" name="address" id="address">
             </form>
 
           </div>

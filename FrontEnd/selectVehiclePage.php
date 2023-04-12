@@ -81,10 +81,10 @@
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
           <?php
-            $tempAccountId = '54321'; //Need to get account ID from session variable instead
+            $AccountId = '54321'; //Need to get account ID from session variable instead
             for($i = 0; $i < sizeof($userArray); $i++)
             {
-              if($userArray[$i]->getAccountID() == $tempAccountId)
+              if($userArray[$i]->getUserName() == $post_data)
               {
                 $arrayIndex = $i;
               }

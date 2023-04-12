@@ -21,7 +21,6 @@
       }
     }
     $UserID = $userArray[$arrayIndex]->getAccountID();
-    echo $UserID;
 ?>
 
 <!DOCTYPE html>

@@ -66,6 +66,23 @@
     text-decoration: none;
 }
 
+#removeVehicle-button {
+    top: 60%;
+    left: 7.5%;
+    width: 234px;
+    height: 63px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 50px;
+    background-color: #0047FF;
+    font-size: 27.606220245361328px;
+    color: #FFFFFF;
+    align-self: auto;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+}
+
 .vehiclePage-waves-background {
     top: 550px;
     left: 0px;

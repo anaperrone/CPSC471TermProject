@@ -90,7 +90,6 @@
 
             <span class="hours-drop-down-title">hours:</span>
             <select class="hours-drop-down" id="hours" onselect="calculateTotal()">
-              <option value="">-</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

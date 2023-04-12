@@ -65,7 +65,7 @@ CREATE TABLE `Stalls` (
 --
 
 INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES 
-(123, 1, 'Handicap', 1),
+(123, 1, 'Handicap', 0),
 (123, 2, 'Handicap', 0),
 (123, 3, 'Standard', 0),
 (123, 4, 'Standard', 0),
@@ -83,7 +83,7 @@ INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES
 (980, 6, 'Standard', 0),
 (980, 7, 'Standard', 0),
 (980, 8, 'Standard', 0),
-(980, 9, 'Standard', 1),
+(980, 9, 'Standard', 0),
 (980, 10, 'Standard', 0),
 (980, 11, 'Standard', 0),
 (980, 12, 'Standard', 0),
@@ -115,8 +115,13 @@ CREATE TABLE `Vehicles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for vehicles
+-- Dumping data for 'Vehicles'
 --
+
+INSERT INTO `Vehicles` (`PlateNumber`, `Model`, `Make`, `Colour`, 'Year', 'ParkedInLot', 'ParkedInStall', 'OwnerID') VALUES 
+('ABC1234', 'Altima', 'Nissan', 'Red', '2022', NULL, NULL, 12345)
+('CBA4321', 'Corolla', 'Toyota', 'White', '2001', NULL, NULL, 54321)
+('XYZ1111', 'Focus', 'Ford', 'Blue', '2018', NULL, NULL, 54321)
 
 -- --------------------------------------------------------
 
@@ -135,7 +140,7 @@ CREATE TABLE `Transactions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for transactions
+-- There is no default data for 'Transactions'
 --
 
 -- --------------------------------------------------------
@@ -157,7 +162,7 @@ CREATE TABLE `Tickets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for transactions
+-- There is no default data for 'Tickets'
 --
 
 -- --------------------------------------------------------
@@ -177,7 +182,7 @@ CREATE TABLE `Users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for transactions
+-- Dumping data for users
 --
 
 -- --------------------------------------------------------
@@ -193,7 +198,7 @@ CREATE TABLE `Admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for transactions
+-- There is no default data for 'Admins'
 --
 
 

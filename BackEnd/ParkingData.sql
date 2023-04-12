@@ -152,17 +152,17 @@ CREATE TABLE `Transactions` (
 DROP TABLE IF EXISTS Tickets;
 CREATE TABLE `Tickets` (
 	`Number` varchar(10) DEFAULT NULL,
-    `DateDay` varchar(10) DEFAULT NULL,
-    `DateMonth` varchar(10) DEFAULT NULL,
-    `DateYear` varchar(10) DEFAULT NULL,
-    `StampHour` varchar(10) DEFAULT NULL,
-    `StampMinute` varchar(10) DEFAULT NULL,
+    `lotID` varchar(10) DEFAULT NULL,
+    `lotAddress` varchar(50) DEFAULT NULL,
+    `plateNum` varchar(50) DEFAULT NULL,
+    `StampStartTime` varchar(10) DEFAULT NULL,
+    `StampEndTime` varchar(10) DEFAULT NULL,
     `Type` varchar(50) DEFAULT NULL,
     `Amount` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for transactions
+-- There is no default data for tickets
 --
 
 -- --------------------------------------------------------

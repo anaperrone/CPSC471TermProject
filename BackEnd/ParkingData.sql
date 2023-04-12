@@ -65,7 +65,7 @@ CREATE TABLE `Stalls` (
 --
 
 INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES 
-(123, 1, 'Handicap', 0),
+(123, 1, 'Handicap', 1),
 (123, 2, 'Handicap', 0),
 (123, 3, 'Standard', 0),
 (123, 4, 'Standard', 0),
@@ -83,7 +83,7 @@ INSERT INTO `Stalls` (`LotID`, `Number`, `Type`, `Reserved`) VALUES
 (980, 6, 'Standard', 0),
 (980, 7, 'Standard', 0),
 (980, 8, 'Standard', 0),
-(980, 9, 'Standard', 0),
+(980, 9, 'Standard', 1),
 (980, 10, 'Standard', 0),
 (980, 11, 'Standard', 0),
 (980, 12, 'Standard', 0),
@@ -140,7 +140,7 @@ CREATE TABLE `Transactions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for 'Transactions'
+-- There is no default data for transactions
 --
 
 -- --------------------------------------------------------
@@ -162,7 +162,7 @@ CREATE TABLE `Tickets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for 'Tickets'
+-- There is no default data for transactions
 --
 
 -- --------------------------------------------------------
@@ -175,6 +175,8 @@ DROP TABLE IF EXISTS Users;
 CREATE TABLE `Users` (
 	`FName` varchar(50) DEFAULT NULL,
     `LName` varchar(50) DEFAULT NULL,
+    `Username` varchar(50) DEFAULT NULL,
+    `Password` varchar(50) DEFAULT NULL,
     `AccountID` varchar(50) DEFAULT NULL,
     `CardNum` varchar(50) DEFAULT NULL,
     `Passcode` varchar(50) DEFAULT NULL,
@@ -182,12 +184,12 @@ CREATE TABLE `Users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for users
+-- Dumping Data for "Users"
 --
 
-INSERT INTO `Users` (`FName`, `Lname`, `AccountID`, `CardNum`, `Passcode`, `CVV`) VALUES 
-('Hamza', 'Lodhi', '54321', '1234567890123456', 'hello', '230');
-
+INSERT INTO `Users` (`FName`, `LName`, `Username`, `Password`, `AccountID`, `CardNum`, `Passcode`, `CVV`) VALUES
+('Hamza', 'Lodhi', 'Username', 'Password', '54321', '1234567890123456', '11/24', '230'), # passcode is actually expiry date
+('TestName', 'TestLast', 'Username', 'Password', 12356, 1111222233334444, '11/24', 123);
 -- --------------------------------------------------------
 
 --
@@ -197,13 +199,17 @@ INSERT INTO `Users` (`FName`, `Lname`, `AccountID`, `CardNum`, `Passcode`, `CVV`
 DROP TABLE IF EXISTS Admins;
 CREATE TABLE `Admins` (
 	`AdminID` varchar(50) DEFAULT NULL,
-    `Name` varchar(50) DEFAULT NULL
+    `Name` varchar(50) DEFAULT NULL,
+    `Password` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- There is no default data for 'Admins'
+-- Dumping Data for "Admins"
 --
 
+INSERT INTO `Admins` (`AdminID`, `Name`, `Password`) VALUES
+('11111', 'Admin', 'TheKing');
+-- --------------------------------------------------------
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

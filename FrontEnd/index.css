@@ -109,8 +109,8 @@
     display: none;
   }
   .parkshark-logo {
-    top: 20px;
-    left: 20px;
+    top: 40px;
+    left: 40px;
     position: absolute;
     width: 50px;
   }
@@ -134,8 +134,8 @@
     text-decoration: none;
   }
   .index-reg-log-button {
-    top: 20px;
-    right: 27px;
+    top: 40px;
+    right: 40px;
     width: 150px;
     height: 50px;
     display: flex;

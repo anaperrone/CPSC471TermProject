@@ -65,7 +65,7 @@
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
             <span class='registerPage-welcome-message'><span>welcome!</span></span>
-            <form id = signup action='index.php' method='post'>
+            <form id = signup action='Register.php' method='post'>
                 <input
                 type='text'
                 placeholder='first name'
@@ -96,7 +96,7 @@
                 class='registerPage-confirm-password-input input'
                 name = 'confirmed'
                 />
-                <a href='paymentPage.php' class='registerPage-register-button'>
+                <a href='javascript: signup.submit()' class='registerPage-register-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
                     class='registerPage-register-button-shape'

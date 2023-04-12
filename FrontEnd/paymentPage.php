@@ -65,26 +65,26 @@
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
             <span class='paymentPage-message'><span>please enter your payment details:</span></span>
-            <form id = signup action='index.php' method='post'>
+            <form id = signup action='Payment.php' method='post'>
                 <input
                 type='text'
                 placeholder='card number'
                 class='paymentPage-card-input input'
-                name = 'username'
+                name = 'number'
                 />
                 <input
                 type='text'
                 placeholder='expiry date'
                 class='paymentPage-expiry-input input'
-                name = 'confirmed'
+                name = 'date'
                 />
                 <input
                 type='text'
                 placeholder='cvv'
                 class='paymentPage-cvv-input input'
-                name = 'password'
+                name = 'cvv'
                 />
-                <a href='homePage.php' class='paymentPage-submit-button'>
+                <a href='javascript: signup.submit()' class='paymentPage-submit-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
                     class='paymentPage-submit-button-shape'

@@ -1,22 +1,5 @@
 <?php
   session_start();
-
-  $servername = "localhost";
-  $serverusername = "root";
-  $serverpassword = "";
-  $dbname = "ParkingData";
-  // initialize the database connection using the DB driver code
-  include_once '../BackEnd/DB.php';
-  $db = new DBConnection();
-  $db->connectToDB($servername, $serverusername, $serverpassword, $dbname);
-  
-  // $username = $password = "";
-  $username_err = $password_err = $login_err = "";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-  }
 ?>
 
 <!DOCTYPE html>

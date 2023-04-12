@@ -66,20 +66,21 @@
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
             <span class='adminLoginPage-welcome-message'><span>welcome admin</span></span>
             
-            <form id = adminLogin action='index.php' method='post'>
+            <form id = adminLogin action='authenticationAdmin.php' method='post'>
                 <input
                 type='password'
                 placeholder='password'
                 class='adminLoginPage-password-input input'
-                name = 'password'
-                />
+                name = "password"
+                >
                 <input
                 type='text'
                 placeholder='username'
                 class='adminLoginPage-username-input input'
-                name = 'username'
-                />
-                <a href='adminHomePage.php' class='adminLoginPage-log-in-button'>
+                name = "username"
+                >
+
+                <a href='javascript: adminLogin.submit();' class='adminLoginPage-log-in-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
                     class='adminLoginPage-log-in-button-shape'

@@ -1,20 +1,5 @@
 <?php    
     session_start();
-    $post_data = $_SESSION['post_data']; // get the username from here
-    echo $post_data;
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "ParkingData";
-    // initialize the database connection using the DB driver code
-    include_once '../BackEnd/DB.php';
-    $db = new DBConnection();
-    $db->connectToDB($servername, $username, $password, $dbname);
-    $vehicleArray = $db->DBGetVehicles();
-    $userArray = $db->DBGetUsers($vehicleArray);
-    //echo $vehicleArray[0]->getModel();
-    // close the database connection
 ?>
 
 <!DOCTYPE html>
@@ -69,53 +54,16 @@
   </head>
   <body>
     <div>
-      <link href="./vehiclePage.css" rel="stylesheet" />
+      <link href="./ticketPage.css" rel="stylesheet" />
 
-      <div class="vehiclePage-container">
-        <div class="vehiclePage-page">
+      <div class="ticketPage-container">
+        <div class="ticketPage-page">
           <img
-            src="public/playground_assets/Waves.png"
-            class="vehiclePage-waves-background"
-            />
+              src="public/playground_assets/Waves.png"
+              class="ticketPage-waves-background"
+          />
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-
-          <?php
-            for($i = 0; $i < sizeof($userArray); $i++)
-            {
-              if($userArray[$i]->getUserName() == $post_data)
-              {
-                $arrayIndex = $i;
-              }
-            }
-          ?>
-          <div class="button-container">
-            <?php
-              $vehiclesInUserArray = $userArray[$arrayIndex]->getVehicles();
-              for($i = 0; $i < sizeof($vehiclesInUserArray); $i++)
-              {
-                echo "<button class='button' id='" . $vehiclesInUserArray[$i]->getPlatnum() . "'> <strong>Plate number:</strong><br>" . 
-                $vehiclesInUserArray[$i]->getPlatnum(). "<br><br> <strong>Car:</strong> " . $vehiclesInUserArray[$i]->getYear() . " " . 
-                $vehiclesInUserArray[$i]->getMake(). " " . $vehiclesInUserArray[$i]->getModel() . "<br><br><strong>Colour:</strong> " . 
-                $vehiclesInUserArray[$i]->getColour() . "</button>";
-              }
-            ?>
-            <a href = "userAddVehicle.php">
-              <button class='button'><span style="font-size: 60px;"><strong>+</strong></span></button>
-            </a>
-          </div>
-          <span class="removeVehicle-drop-down-title">Remove vehicle</span>
-          <select class="removeVehicle-drop-down" id="chosenPlatnum">
-            <option value="">-</option>
-            <?php
-              for($i = 0; $i < sizeof($vehiclesInUserArray); $i++)
-              {
-                echo "<option value='" . $vehiclesInUserArray[$i]->getPlatnum() . "'>" . $vehiclesInUserArray[$i]->getPlatnum() . "</option>";
-              }
-            ?>
-            
-          </select>
-          <button id="removeVehicle-button">Remove Vehicle</button>
         </div>
       </div>
     </div>

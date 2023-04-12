@@ -8,7 +8,7 @@
 }
 .ticketPage-page {
     width: 100%;
-    height: 1117px;
+    height: 1700px;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -46,6 +46,152 @@
     top: 76px;
     left: 80px;
     position: absolute;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2000px;
+    margin: auto;
+}
+
+.ticket-box {
+    top: 0px;
+    left: -10px;
+    width: 700px;
+    height: 600px;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.ticket-title {
+    top: 40px;
+    left: 225px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: relative;
+    font-size: 30px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.ticket-lotID {
+    top: 100px;
+    left: 20px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-style: Regular;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.ticket-lotAddr {
+    top: 180px;
+    left: 20px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-style: Regular;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.ticket-vehicle {
+    top: 260px;
+    left: 20px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-style: Regular;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.ticket-sessionTime {
+    top: 340px;
+    left: 20px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-style: Regular;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.ticket-sessionExpirationTime {
+    top: 420px;
+    left: 20px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-style: Regular;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.ticket-sessionPrice {
+    top: 500px;
+    left: 20px;
+    color: #18274E;
+    width: 800px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    font-style: Regular;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
 }
 
 /* mobile compatability for displays with width under 414px */

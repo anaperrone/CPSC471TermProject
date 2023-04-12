@@ -1,5 +1,19 @@
 <?php    
     session_start();
+    $post_data = $_SESSION['post_data']; // get the username from here
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ParkingData";
+    // initialize the database connection using the DB driver code
+    include_once '../BackEnd/DB.php';
+    $db = new DBConnection();
+    $db->connectToDB($servername, $username, $password, $dbname);
+    $ticketArray = $db->DBGetTickets(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
+    $vehicleArray = $db->DBGetVehicles();
+    $userArray = $db->DBGetUsers($vehicleArray);
+    // close the database connection
+    $db->closeDBConnection();
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +78,48 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+
+            <?php
+              for($i = 0; $i < sizeof($userArray); $i++)
+              {
+                if($userArray[$i]->getUserName() == $post_data)
+                {
+                  $arrayIndex = $i;
+                }
+              }
+              $userTicketArray = [];
+              for($i = 0; $i < sizeof($ticketArray); $i++)
+              {
+                if($ticketArray[$i]->getUserID() == $userArray[$arrayIndex]->getAccountID())
+                {
+                  $userTicketArray[] = $ticketArray[$i]; 
+                }
+              }
+            ?>
+            <div class="box-container">
+              <?php 
+              for($i = 0; $i < sizeof($userTicketArray); $i++)
+              {
+                $selectedLotID = $userTicketArray[$i]->getLotID();
+                $selectedLotAddr = $userTicketArray[$i]->getLotAddress();
+                $selectedVehicle = $userTicketArray[$i]->getPlateNum();
+                $sessionStartTime = $userTicketArray[$i]->getTimestampStart();
+                $sessionEndTime = $userTicketArray[$i]->getTimestampEnd();
+                $calculatedPrice = $userTicketArray[$i]->getAmount();
+
+                echo "<div class='ticket-box'>
+                <span class='ticket-title'><span>parkshark receipt</span></span>
+                <span class='ticket-lotID'><span><b>Parking Lot ID:</b> $selectedLotID </span></span>
+                <span class='ticket-lotAddr'><span><b>Parking Lot Address:</b> $selectedLotAddr</span></span>
+                <span class='ticket-vehicle'><span><b>Vehicle Registered:</b> $selectedVehicle</span></span>
+                <span class='ticket-sessionTime'><span><b>Session Start Time:</b> $sessionStartTime</span></span>
+                <span class='ticket-sessionExpirationTime'><span><b>Session End Time:</b> $sessionEndTime</span></span>
+                <span class='ticket-sessionPrice'><span><b>Session Price:</b> $calculatedPrice</span></span>
+                </div>";
+              }
+              ?>
+            </div>
+
         </div>
       </div>
     </div>

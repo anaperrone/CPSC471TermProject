@@ -8,8 +8,9 @@
     include_once '../BackEnd/DB.php';
     $db = new DBConnection();
     $db->connectToDB($servername, $username, $password, $dbname);
-    $stallArray = $db->DBGetStalls(); // this array is only needed to build the parking lot objects, but becomes irrelivant after
-    $lotArray = $db->DBGetParkingLots($stallArray);
+    $vehicleArray = $db->DBGetVehicles();
+    $userArray = $db->DBGetUsers($vehicleArray);
+    //echo $vehicleArray[0]->getModel();
     // close the database connection
     $db->closeDBConnection();
 ?>
@@ -76,7 +77,30 @@
           />
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-
+          <?php
+            $tempAccountId = '54321'; //Need to get account ID from session variable instead
+            for($i = 0; $i < sizeof($userArray); $i++)
+            {
+              if($userArray[$i]->getAccountID() == $tempAccountId)
+              {
+                $arrayIndex = $i;
+              }
+            }
+          ?>
+          <div class="button-container">
+            <a href = "selectParkingTimePage.php">
+              <?php
+                $vehiclesInUserArray = $userArray[$arrayIndex]->getVehicles();
+                for($i = 0; $i < sizeof($vehiclesInUserArray); $i++)
+                {
+                  echo "<button class='button' id='" . $vehiclesInUserArray[$i]->getPlatnum() . "'> <strong>Plate number:</strong><br>" . 
+                  $vehiclesInUserArray[$i]->getPlatnum(). "<br><br> <strong>Car:</strong> " . $vehiclesInUserArray[$i]->getYear() . " " . 
+                  $vehiclesInUserArray[$i]->getMake(). " " . $vehiclesInUserArray[$i]->getModel() . "<br><br><strong>Colour:</strong> " . 
+                  $vehiclesInUserArray[$i]->getColour() . "</button>";
+                }
+              ?>
+            </a>
+          </div>
         </div>
       </div>
     </div>

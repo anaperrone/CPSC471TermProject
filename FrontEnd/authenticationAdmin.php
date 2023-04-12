@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION['post_data'] = $_POST['username'];
 
 // the creds for the database; change as needed
 $servername = "localhost:4306";
@@ -9,32 +8,30 @@ $password = "";
 $dbname = "ParkingData";
 // initialize the database connection using the DB driver code
 include_once '../BackEnd/DB.php';
-include_once '../BackEnd/User.php';
+include_once '../BackEnd/Admin.php';
 
 $db = new DBConnection();
 $db->connectToDB($servername, $username, $password, $dbname);
-$carArray = $db->DBGetVehicles();
-$UserArray = $db->DBGetUsers($carArray);
+$AdminArray = $db->DBGetAdmins();
 // close the database connection
 $db->closeDBConnection();
 
 if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"])){
     $uname = $_POST['username'];
     $pass = $_POST['password'];
-    
-    foreach($UserArray as $User){
-        if($uname === ($User->getUserName()) && $pass === ($User->getPassword())){
-            header ("Location: homePage.php");
+
+    foreach($AdminArray as $Admin){
+        if($uname === ($Admin->getName()) && $pass === ($Admin->getPassword())){
+            header ("Location: adminHomePage.php");
             exit();
         }
     }
-    header ("Location: loginPage.php?erro=Wrong");
+    header ("Location: adminLoginPage.php?erro=Wrong");
     exit();
-    
 }
 
 else{
-    header ("Location: loginPage.php?erro=Failed");
+    header ("Location: adminLoginPage.php?erro=Failed");
     exit();
 }
 

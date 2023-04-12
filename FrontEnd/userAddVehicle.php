@@ -1,5 +1,7 @@
 <?php    
     session_start();
+    $post_data = $_SESSION['post_data']; // get the username from here
+    echo $post_data;
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +66,45 @@
           />
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+          <form id = addVehicle action = 'addVehicle.php' method='post'>
+            <input
+            type='text'
+            placeholder='Plate Number'
+            class='registerPage-fname-input input'
+            name = 'PlatNum'
+            />
+            <input
+            type='text'
+            placeholder='Model'
+            class='registerPage-lname-input input'
+            name = 'Model'
+            />
+            <input
+            type='text'
+            placeholder='Make'
+            class='registerPage-username-input input'
+            name = 'Make'
+            />
+            <input
+            type='text'
+            placeholder='Colour'
+            class='registerPage-username-input input'
+            name = 'Colour'
+            />
+            <input
+            type='text'
+            placeholder='Year'
+            class='registerPage-username-input input'
+            name = 'Year'
+            />
+            <a href='javascript: addVehicle.submin()' class='registerPage-register-button'>
+            <img
+                src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
+                class='registerPage-register-button-shape'
+            />
+            <span class='registerPage-register-button-text'><span>register</span></span>
+            </a>
+          </form>
         </div>
       </div>
     </div>

@@ -208,29 +208,29 @@ class DBConnection extends mysqli {
         while($row = mysqli_fetch_array($results)) {
             include_once 'Ticket.php';
             $Number = $row['Number'];
-            $Day = $row['DateDay'];
-            $Month = $row['DateMonth'];
-            $Year = $row['DateYear'];
-            $StampHour = $row['StampHour'];
-            $StampMinute = $row['StampMinute'];
+            $LotID = $row['lotID'];
+            $LotAddress = $row['lotAddress'];
+            $PlateNum = $row['plateNum'];
+            $Start = $row['StampStartTime'];
+            $End = $row['StampEndTime'];
             $Type = $row['Type'];
             $Amount = $row['Amount'];
-            $array[] = new Ticket($Number, $Day, $Month, $Year, $StampHour, $StampMinute, $Type, $Amount);
+            $array[] = new Ticket($Number, $LotID, $LotAddress, $PlateNum, $Start, $End, $Type, $Amount);
         }
         return($array);
     }
     // output function for tickets
     function DBInsertIntoTickets($theTicket){
         $N = $theTicket->getNumber();
-        $TheDay = $theTicket->getDay();
-        $TheMonth = $theTicket->getMonth();
-        $Theyear = $theTicket->getYear();
-        $Hour = $theTicket->getTimestamp()->getHour();
-        $Minute = $theTicket->getTimestamp()->getMinute();
+        $ID = $theTicket->getLotID();
+        $LotAdd = $theTicket->getLotAddress();
+        $PlatNum = $theTicket->getPlateNum();
+        $Start = $theTicket->getTimestampStart();
+        $End = $theTicket->getTimestampEnd();
         $Type = $theTicket->getType();
         $amount = $theTicket->getAmount();
         
-        $results = mysqli_query($this->connection, "INSERT INTO Tickets (DateDay, Number, DateMonth, DateYear, StampHour, StampMinute, Type, Amount) VALUES ('$TheDay', '$N', '$TheMonth', '$Theyear', '$Hour', '$Minute', '$Type', '$amount')");
+        $results = mysqli_query($this->connection, "INSERT INTO Tickets (Number, lotID, lotAddress, plateNum, StampStartTime, StampEndTime, Type, Amount) VALUES ('$N', '$ID', '$LotAdd', '$PlatNum', '$Start', '$End', '$Type', '$amount')");
         if(!$results){
             echo "Query Failed: ";
             exit();

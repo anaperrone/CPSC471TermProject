@@ -2,20 +2,21 @@
 class Ticket {
     // variables for the ticket class
     private $Number;
-    private $DateDay;
-    private $DateMonth;
-    private $DateYear;
-    private $Timestamp; 
+    private $LotID;
+    private $LotAddress;
+    private $PlateNum;
+    private $TimestampStart; 
+    private $TimestampEnd;
     private $Type;
     private $Amount;
     // default constructor
-    public function __construct($Num, $D, $M, $Y, $H, $Min, $Ty, $A) {
-        include_once 'Timestamp.php';
+    public function __construct($Num, $ID, $AD, $PN, $ST, $EN, $Ty, $A) {
         $this->Number = $Num;
-        $this->DateDay = $D;
-        $this->DateMonth = $M;
-        $this->DateYear = $Y;
-        $this->Timestamp = new Timestamp($H, $Min);
+        $this->LotID = $ID;
+        $this->LotAddress = $AD;
+        $this->PlateNum = $PN;
+        $this->TimestampStart = $ST;
+        $this->TimestampEnd = $EN;
         $this->Type = $Ty;
         $this->Amount = $A;
         return($this);
@@ -24,21 +25,25 @@ class Ticket {
     function getNumber(){
         return($this->Number);
     }
-    // a getter for the Day parameter
-    function getDay(){
-        return($this->DateDay);
+    // a getter for the LotID parameter
+    function getLotID(){
+        return($this->LotID);
     }
-    // a getter for the Month parameter
-    function getMonth(){
-        return($this->DateMonth);
+    // a getter for the Lot Address parameter
+    function getLotAddress(){
+        return($this->LotAddress);
     }
-    // a getter for the Year parameter
-    function getYear(){
-        return($this->DateYear);
+    // a getter for the PlateNum parameter
+    function getPlateNum(){
+        return($this->PlateNum);
     }
-    // a getter for the Timestamp object
-    function getTimestamp(){
-        return($this->Timestamp);
+    // a getter for the TimestampStart object
+    function getTimestampStart(){
+        return($this->TimestampStart);
+    }
+    // a getter for the TimestampEnd object
+    function getTimestampEnd(){
+        return($this->TimestampEnd);
     }
     // a getter for the Type parameter
     function getType(){

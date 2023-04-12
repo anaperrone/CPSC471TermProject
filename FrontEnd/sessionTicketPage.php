@@ -1,5 +1,6 @@
 <?php    
     session_start();
+    $post_data = $_SESSION['post_data']; // get the username from here
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -89,9 +90,9 @@
 
             <span class='sessionTicketPage-message'><span>payment successful!</span></span>
             <?php
-            $selectedLotID = $_SESSION['lotID'];
-            $selectedLotAddr = $_SESSION['lotAddress'];
-            $selectedVehicle = $_SESSION['vehicle'];
+            $selectedLotID = $_POST['lotID'];
+            $selectedLotAddr = $_POST['lotAddress'];
+            $selectedVehicle = $_POST['userVehicle'];
             $selectedSessionTime = $_POST['hours'];
             $calculatedPrice = $_POST['total'];  
             ?>

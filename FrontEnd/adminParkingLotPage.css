@@ -19,11 +19,74 @@
     background-color: rgba(23, 38, 77, 1);
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: auto;
+}
+  
+.button {
+    border: none;
+    position: relative;
+    width: 300px;
+    height: 225px;
+    font-size: 20px;
+    vertical-align: top;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+}
+
+.removeParkingLot-drop-down {
+    top: 50%;
+    left: 11%;
+    width: 100px;
+    height: 49px;
+    font-size: 20px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 5px;
+}
+.removeParkingLot-drop-down-title{
+    top: 40%;
+    left: 11%;
+    color: #FFFFFF;
+    width: 149px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    align-self: auto;
+    font-style: Light;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+#removeParkingLot-button {
+    top: 60%;
+    left: 7.5%;
+    width: 234px;
+    height: 63px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 50px;
+    background-color: #0047FF;
+    font-size: 27.606220245361328px;
+    color: #FFFFFF;
+    align-self: auto;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+}
+
 .adminParkingLotPage-waves-background {
     top: 550px;
     left: 0px;
     position: absolute;
-
 }
 .parkshark-logo-text {
     top: 76px;
@@ -50,31 +113,11 @@
     position: absolute;
 }
 
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 880px;
-    margin: auto;
-}
-  
-.button {
-    border: none;
-    position: relative;
-    width: 200px;
-    height: 150px;
-    font-size: 20px;
-    vertical-align: top;
-    margin: 10px;
-    border-radius: 50px;
-    background-color: #FFFFFF;
-}
-
 /* mobile compatability for displays with width under 414px */
-
 
 @media(max-width: 414px) {
     .adminParkingLotPage-page {
-        height: 800px auto;
+        height: 844px;
     }
   
     .adminParkingLotPage-waves-background {
@@ -87,30 +130,10 @@
         display: none;
     }
     .parkshark-logo {
-        top: 55px;
+        top: 750px;
         left: 172px;
         position: absolute;
         width: 50px;
-    }
-
-    .button-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 350px;
-        margin: auto;
-        position: absolute;
-        left: 85px;
-    }
-      
-    .button {
-        top: 150px;
-        left: 0px;
-        width: 200px;
-        height: 150px;
-        background-color: #FFFFFF;
-        border-radius: 40px;
-        margin: 10px;
-        padding: 20px;
     }
 }
 

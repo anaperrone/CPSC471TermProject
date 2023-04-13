@@ -1,0 +1,128 @@
+.adminAddParkingLot-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.adminAddParkingLot-page {
+    width: 100%;
+    height: 1117px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    justify-content: center;
+    background-color: rgba(23, 38, 77, 1);
+}
+  
+.input-field {
+    width: 200px;
+    margin: 500px auto;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    position: relative;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #333;
+}
+
+.AddParkingLot-submit-button {
+    top: 70%;
+    left: 44.8%;
+    width: 234px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.AddParkingLot-submit-button-shape { 
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 55px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 50px;
+}
+.AddParkingLot-submit-button-text {
+    top: 11px;
+    left: 45px;
+    color: rgba(255, 255, 255, 1);
+    width: 111px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    align-self: auto;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.adminAddParkingLot-waves-background {
+    top: 550px;
+    left: 0px;
+    position: absolute;
+}
+.parkshark-logo-text {
+    top: 76px;
+    left: 178px;
+    color: rgba(255, 255, 255, 1);
+    width: 453px;
+    height: auto;
+    position: absolute;
+    font-size: 62.43959426879883px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: Montserrat Alternates;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+.parkshark-logo {
+    top: 76px;
+    left: 80px;
+    position: absolute;
+}
+
+/* mobile compatability for displays with width under 414px */
+
+@media(max-width: 414px) {
+    .adminAddParkingLot-page {
+        height: 844px;
+    }
+  
+    .adminAddParkingLot-waves-background {
+        top: 600px;
+        width: 600px;
+        left: -110px;
+        position: absolute;
+    }
+    .parkshark-logo-text {
+        display: none;
+    }
+    .parkshark-logo {
+        top: 750px;
+        left: 172px;
+        position: absolute;
+        width: 50px;
+    }
+}

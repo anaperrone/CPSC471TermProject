@@ -79,24 +79,65 @@
 
           <div class="button-container">
             <?php 
-            for($i = 0; $i < sizeof($lotArray); $i++)
-            {
+            for ($i = 0; $i < sizeof($lotArray); $i++) {
               $lotID = $lotArray[$i]->getLotID();
               $address = $lotArray[$i]->getAddress();
-              echo "<button class='button' id='$lotID'>
-              <strong>Address:</strong><br>$address<br><br><strong>Size:</strong> " . $lotArray[$i]->getSize() . "
-              </button>";
-            }
+              echo "<button class='button' id='$lotID'>" .
+                  "<strong>Lot ID:</strong><br>" . $lotID . "<br><br><strong>Address:</strong><br>" .
+                  $address . "<br><br><strong>Size:</strong> " . $lotArray[$i]->getSize() . "</button>";
+          }
             ?>
             <a href = "adminAddParkingLot.php">
               <button class='button'><span style="font-size: 60px;"><strong>+</strong></span></button>
-            </a>   
+            </a>
+          </div>
+          
+          <span class="removeParkingLot-drop-down-title">Remove Parking Lot</span>
+          <select class="removeParkingLot-drop-down" id="chosenLotID">
+            <?php
+              for($i = 0; $i < sizeof($lotArray); $i++)
+              {
+                echo "<option value='" . $lotArray[$i]->getLotID() . "'>" . $lotArray[$i]->getLotID() . "</option>";
+              }
+            ?>
+          </select>
+
+          <form id="removeParkingLotForm" method="post" action="adminParkingLotPage.php">
+            <input type="hidden" id="chosenLotIDFormInfo" name="chosenLotID" value="">
+          </form>
+          
+          <button id="removeParkingLot-button">Submit</button>
+
             <script>
-                /*function selectButton(buttonID, buttonAddress) {
-                  document.getElementById('parkingLotForm').elements['lotID'].value = buttonID;
-                  document.getElementById('parkingLotForm').elements['address'].value = buttonAddress;
-                  document.getElementById('parkingLotForm').submit();
-                }*/
+              document.getElementById("removeParkingLot-button").addEventListener("click", function() 
+              {
+                //The below two statements are the response to the clicks
+                document.getElementById("chosenLotIDFormInfo").value = document.getElementById("chosenPlatnum").value;
+                document.getElementById("removeParkingLotForm").submit();
+                <?php
+                  if(isset($_POST['chosenPlatnum'])) 
+                  {
+    
+                    $chosenLotID = $_POST['chosenLotID'];
+                    $lotArrayIndex;
+                    for($i = 0; $i < sizeof($lotArray); $i++)
+                    {
+                      if($lotArray[$i]->getLotID() == $chosenLotID)
+                      {
+                        $lotArrayIndex = $i;
+                      }
+                    }
+
+                    $db->DBDeleteFromParkingLots($lotArray[$lotArrayIndex]);
+                  }
+                  //Close connection  
+                  $db->closeDBConnection();
+                ?>
+              setTimeout(function()
+              {
+                window.location.href = "homePage.php";
+              }, 1);
+              });
             </script>
           </div>
         </div>

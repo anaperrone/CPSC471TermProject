@@ -326,7 +326,30 @@ class DBConnection extends mysqli {
             echo "Success";
         }
     }
-
+    // reciever for price
+    function DBGetPrice(){
+        $results = mysqli_query($this->connection, "SELECT * FROM Price");
+        if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        while($row = mysqli_fetch_array($results)) {
+            $Price = $row['thePrice'];
+        }
+        return($Price);
+    }
+    // setter for price
+    function DBSetPrice($newPrice){
+        $results = mysqli_query($this->connection, "DELETE FROM Price");
+        $results = mysqli_query($this->connection, "INSERT INTO Price (thePrice) VALUES ('$newPrice')");
+        if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        else{
+            echo "Success";
+        }
+    }
     // a function to disconnect the database
     function closeDBConnection() {
         mysqli_close($this->connection);

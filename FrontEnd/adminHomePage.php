@@ -82,12 +82,12 @@
             </a>
             <a href='AdminVehiclePage.php' class='adminHomePage-vehicle-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-vehicle-button-text'><span>manage vehicles</span></span>
+                <span class='adminHomePage-vehicle-button-text'><span>delete vehicles</span></span>
               </button>
             </a>
             <a href='accountPage.php' class='adminHomePage-account-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-account-button-text'><span>manage accounts</span></span>
+                <span class='adminHomePage-account-button-text'><span>delete accounts</span></span>
               </button>
             </a>
         </div>

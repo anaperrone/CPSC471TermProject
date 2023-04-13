@@ -18,6 +18,36 @@
     justify-content: center;
     background-color: rgba(23, 38, 77, 1);
 }
+
+.userAddVehicle-waves-background {
+    top: 550px;
+    left: 0px;
+    position: absolute;
+}
+.parkshark-logo-text {
+    top: 76px;
+    left: 178px;
+    color: rgba(255, 255, 255, 1);
+    width: 453px;
+    height: auto;
+    position: absolute;
+    font-size: 62.43959426879883px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: Montserrat Alternates;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+.parkshark-logo {
+    top: 76px;
+    left: 80px;
+    position: absolute;
+}
   
 .input-field {
     width: 200px;
@@ -73,41 +103,12 @@
     text-decoration: none;
 }
 
-.userAddVehicle-waves-background {
-    top: 550px;
-    left: 0px;
-    position: absolute;
-}
-.parkshark-logo-text {
-    top: 76px;
-    left: 178px;
-    color: rgba(255, 255, 255, 1);
-    width: 453px;
-    height: auto;
-    position: absolute;
-    font-size: 62.43959426879883px;
-    align-self: auto;
-    font-style: Bold;
-    text-align: left;
-    font-family: Montserrat Alternates;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-.parkshark-logo {
-    top: 76px;
-    left: 80px;
-    position: absolute;
-}
-
 /* mobile compatability for displays with width under 414px */
 
 @media(max-width: 414px) {
     .userAddVehicle-page {
         height: 844px;
+        overflow-y: scroll;
     }
   
     .userAddVehicle-waves-background {
@@ -120,24 +121,66 @@
         display: none;
     }
     .parkshark-logo {
-        top: 750px;
+        top: 55px;
         left: 172px;
         position: absolute;
         width: 50px;
     }
-    .userAddVehicle-fname-input {
-        top: 290px;
-        left: 20px;
-        width: 165px;
-        height: 45px;
-        position: absolute;
-        font-size: 17px;
-        font-family: Source Sans Pro;
-        border-style: hidden;
-        background-color: #FFFFFF;
-        border-top-width: 10px;
-        border-left-width: 20px;
-        border-right-width: 10px;
-        border-bottom-width: 10px;
+    .input-field {
+        top: 100px;
+        left: 100px;
+        width: 200px;
+        margin: 50px auto;
+        overflow: auto;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: none;
+        position: relative;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        color: #333;
     }
+    
+    .userAddVehiclePage-submit-button {
+        top: 650px;
+        left: 100px;
+        width: 234px;
+        height: 55px;
+        display: flex;
+        position: absolute;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-color: transparent;
+        text-decoration: none;
+    }
+    
+    .userAddVehiclePage-submit-button-shape { 
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 55px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 50px;
+    }
+    .userAddVehiclePage-submit-button-text {
+        top: 11px;
+        left: 45px;
+        color: rgba(255, 255, 255, 1);
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 600;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
 }

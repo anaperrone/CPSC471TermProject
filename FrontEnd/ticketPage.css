@@ -8,7 +8,7 @@
 }
 .ticketPage-page {
     width: 100%;
-    height: 1700px;
+    height: auto;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -48,23 +48,49 @@
     position: absolute;
 }
 
+.homePage-button {
+    top: 75px;
+    right: 102px;
+    width: 300px;
+    height: 75px;
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    font-family: Source Sans Pro;
+    border-style: hidden;
+    border-radius: 16px;
+    flex-direction: row;
+}
+.homePage-icon {
+    top: 28px;
+    right: 33px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+.homePage-button-text {
+    font-size: 30px;
+    align-self: center;
+    font-weight: 400;
+}
+
 .box-container {
     display: flex;
     flex-wrap: wrap;
     width: 2000px;
-    margin: auto;
+    margin: 100px auto;
 }
 
 .ticket-box {
-    top: 0px;
-    left: -10px;
+    position: relative;
+    top: 100px;
     width: 700px;
     height: 600px;
+    overflow: auto;
     background-color: #FFFFFF;
     border-radius: 40px;
     margin: 10px;
     padding: 20px;
-    position: relative;
 }
 
 .ticket-title {
@@ -198,7 +224,7 @@
 
 @media(max-width: 414px) {
     .ticketPage-page {
-        height: 844px;
+        height: auto;
     }
   
     .ticketPage-waves-background {
@@ -211,10 +237,182 @@
         display: none;
     }
     .parkshark-logo {
-        top: 750px;
-        left: 172px;
+        top: 40px;
+        left: 40px;
         position: absolute;
         width: 50px;
+    }
+
+    .homePage-button {
+        top: 40px;
+        right: 40px;
+        width: 170px;
+        height: 50px;
+        display: flex;
+        position: absolute;
+        font-size: 15px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        border-radius: 16px;
+        flex-direction: row;
+    }
+    .homePage-icon {
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 22px;
+        position: absolute;
+    }
+    .homePage-button-text {
+        font-size: 15px;
+        align-self: center;
+        font-weight: 400;
+    }
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        margin: auto;
+    }
+
+    .ticket-box {
+        top: 150px;
+        left: 0px;
+        width: 380px;
+        height: 560px;
+        background-color: #FFFFFF;
+        border-radius: 40px;
+        margin: 10px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .ticket-title {
+        top: 20px;
+        left: 5px;
+        color: #18274E;
+        width: 200px;
+        height: auto;
+        position: relative;
+        font-size: 25px;
+        font-style: Regular;
+        text-align: center;
+        font-family: Montserrat Alternates;
+        font-weight: 500;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .ticket-lotID {
+        top: 100px;
+        left: 10px;
+        color: #18274E;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-style: Regular;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: 40px;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .ticket-lotAddr {
+        top: 180px;
+        left: 10px;
+        color: #18274E;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-style: Regular;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: 40px;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .ticket-vehicle {
+        top: 260px;
+        left: 10px;
+        color: #18274E;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-style: Regular;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: 40px;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .ticket-sessionTime {
+        top: 340px;
+        left: 10px;
+        color: #18274E;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-style: Regular;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: 40px;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .ticket-sessionExpirationTime {
+        top: 420px;
+        left: 10px;
+        color: #18274E;
+        width: 250px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-style: Regular;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: 40px;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+    
+    .ticket-sessionPrice {
+        top: 500px;
+        left: 10px;
+        color: #18274E;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        font-size: 20px;
+        font-style: Regular;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: 40px;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
     }
 }
 

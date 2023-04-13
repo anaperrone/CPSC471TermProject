@@ -78,6 +78,15 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+            <a href = 'homePage.php' class = 'homePage-button button'>
+              <img
+                src="public/playground_assets/homePageIcon.png"
+                alt="Vector125"
+                class="homePage-icon "
+              />
+              <span class="homePage-button-text">go to home page</span>
+              </span>
+            </a>
 
             <?php
               for($i = 0; $i < sizeof($userArray); $i++)

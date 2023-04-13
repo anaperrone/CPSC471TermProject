@@ -94,7 +94,7 @@
               />
               <span class="homePage-button-text">go to home page</span>
               </span>
-          </a>
+            </a>
 
             <span class='sessionTicketPage-message'><span>payment successful!</span></span>
             <?php

@@ -134,7 +134,7 @@
             <button id="pay-button" style="display: none;">pay</button>
             <?php
               $db = new DBConnection();
-              $db->connectToDB($servername, $username, $password, $dbname);
+              $db->connectToDB($servername, $serverusername, $serverpassword, $dbname);
               $price = $db->DBGetPrice();
             ?>
 

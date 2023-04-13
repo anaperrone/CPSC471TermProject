@@ -1,4 +1,4 @@
-.selectVehiclePage-container {
+.adminParkingLotPage-container {
     width: 100%;
     display: flex;
     overflow: auto;
@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
 }
-.selectVehiclePage-page {
+.adminParkingLotPage-page {
     width: 100%;
     height: 1117px;
     display: flex;
@@ -19,10 +19,11 @@
     background-color: rgba(23, 38, 77, 1);
 }
 
-.selectVehiclePage-waves-background {
+.adminParkingLotPage-waves-background {
     top: 550px;
     left: 0px;
     position: absolute;
+
 }
 .parkshark-logo-text {
     top: 76px;
@@ -52,15 +53,15 @@
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    width: 960px;
+    width: 880px;
     margin: auto;
 }
   
 .button {
     border: none;
     position: relative;
-    width: 300px;
-    height: 225px;
+    width: 200px;
+    height: 150px;
     font-size: 20px;
     vertical-align: top;
     margin: 10px;
@@ -70,13 +71,13 @@
 
 /* mobile compatability for displays with width under 414px */
 
+
 @media(max-width: 414px) {
-    .selectVehiclePage-page {
-        height: 844px;
-        overflow-y: scroll;
+    .adminParkingLotPage-page {
+        height: 800px auto;
     }
   
-    .selectVehiclePage-waves-background {
+    .adminParkingLotPage-waves-background {
         top: 600px;
         width: 600px;
         left: -110px;
@@ -91,23 +92,24 @@
         position: absolute;
         width: 50px;
     }
+
     .button-container {
         display: flex;
         flex-wrap: wrap;
         width: 350px;
         margin: auto;
         position: absolute;
-        left: 35px;
+        left: 85px;
     }
-    
+      
     .button {
         top: 150px;
         left: 0px;
-        width: 300px;
-        height: 200px;
-        margin: 10px;
-        border-radius: 50px;
+        width: 200px;
+        height: 150px;
         background-color: #FFFFFF;
+        border-radius: 40px;
+        margin: 10px;
         padding: 20px;
     }
 }

@@ -65,7 +65,7 @@
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
             <span class='adminHomePage-whereto-message'><span>where to?</span></span>
-            <a href='parkinglotPage.php' class='adminHomePage-parkinglot-button'> 
+            <a href='adminParkingLotPage.php' class='adminHomePage-parkinglot-button'> 
               <button type = 'submit'>
                 <span class='adminHomePage-parkinglot-button-text'><span>manage parking lots</span></span>
               </button>

@@ -56,53 +56,53 @@
   </head>
   <body>
     <div>
-      <link href="./ticketPage.css" rel="stylesheet" />
+      <link href="./userAddVehicle.css" rel="stylesheet" />
 
-      <div class="ticketPage-container">
-        <div class="ticketPage-page">
+      <div class="userAddVehicle-container">
+        <div class="userAddVehicle-page">
           <img
               src="public/playground_assets/Waves.png"
-              class="ticketPage-waves-background"
+              class="userAddVehicle-waves-background"
           />
           <span class="parkshark-logo-text"><span>ParkShark</span></span>
           <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-          <form id = addVehicle action = 'addVehicle.php' method='post'>
+          <form id = 'addVehicle' action = 'addVehicle.php' method='post'>
             <input
             type='text'
             placeholder='Plate Number'
-            class='registerPage-fname-input input'
+            class='input-field'
             name = 'PlatNum'
             />
             <input
             type='text'
             placeholder='Model'
-            class='registerPage-lname-input input'
+            class='input-field'
             name = 'Model'
             />
             <input
             type='text'
             placeholder='Make'
-            class='registerPage-username-input input'
+            class='input-field'
             name = 'Make'
             />
             <input
             type='text'
             placeholder='Colour'
-            class='registerPage-username-input input'
+            class='input-field'
             name = 'Colour'
             />
             <input
             type='text'
             placeholder='Year'
-            class='registerPage-username-input input'
+            class='input-field'
             name = 'Year'
             />
-            <a href='javascript: addVehicle.submin()' class='registerPage-register-button'>
+            <a href='javascript: addVehicle.submit()' class='userAddVehiclePage-submit-button'>
             <img
                 src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
-                class='registerPage-register-button-shape'
+                class='userAddVehiclePage-submit-button-shape'
             />
-            <span class='registerPage-register-button-text'><span>register</span></span>
+            <span class='userAddVehiclePage-submit-button-text'><span>Submit</span></span>
             </a>
           </form>
         </div>

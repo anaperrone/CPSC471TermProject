@@ -36,6 +36,8 @@ if (count($_POST) && isset($_POST["username"]) && isset($_POST["password"]) && i
     }
     if((strlen($uname) == 0) || (strlen($pass) == 0) || (strlen($fname) == 0) || (strlen($lname) == 0)){
         $_SESSION["errorMessage"] .= "You must enter information for all fields";
+        header ("Location: registerPage.php?erro=Enter all Fields");
+        exit();
     }
     if($pass == $check){ // check if passwords match
         header ("Location: paymentPage.php");

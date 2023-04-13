@@ -10,7 +10,7 @@
     width: 100%;
     height: 1117px;
     display: flex;
-    overflow: hidden;
+    overflow-y: scroll;
     position: relative;
     align-items: flex-start;
     flex-shrink: 0;
@@ -19,11 +19,44 @@
     background-color: rgba(23, 38, 77, 1);
 }
 
+.adminParkingLotPage-waves-background {
+    top: 550px;
+    left: 0px;
+    position: absolute;
+}
+.parkshark-logo-text {
+    top: 76px;
+    left: 178px;
+    color: rgba(255, 255, 255, 1);
+    width: 453px;
+    height: auto;
+    position: absolute;
+    font-size: 62.43959426879883px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: Montserrat Alternates;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+.parkshark-logo {
+    top: 76px;
+    left: 80px;
+    position: absolute;
+}
+
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    width: 960px;
+    left: 500px;
+    top: 200px;
+    width: 1400px;
     margin: auto;
+    position: absolute;
 }
   
 .button {
@@ -83,41 +116,11 @@
     font-weight: 300;
 }
 
-.adminParkingLotPage-waves-background {
-    top: 550px;
-    left: 0px;
-    position: absolute;
-}
-.parkshark-logo-text {
-    top: 76px;
-    left: 178px;
-    color: rgba(255, 255, 255, 1);
-    width: 453px;
-    height: auto;
-    position: absolute;
-    font-size: 62.43959426879883px;
-    align-self: auto;
-    font-style: Bold;
-    text-align: left;
-    font-family: Montserrat Alternates;
-    font-weight: 700;
-    line-height: normal;
-    font-stretch: normal;
-    margin-right: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-.parkshark-logo {
-    top: 76px;
-    left: 80px;
-    position: absolute;
-}
-
 /* mobile compatability for displays with width under 414px */
 
 @media(max-width: 414px) {
     .adminParkingLotPage-page {
-        height: 844px;
+        height: 800px auto;
     }
   
     .adminParkingLotPage-waves-background {
@@ -130,10 +133,75 @@
         display: none;
     }
     .parkshark-logo {
-        top: 750px;
+        top: 55px;
         left: 172px;
         position: absolute;
         width: 50px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        margin: auto;
+        position: absolute;
+        left: 70px;
+    }
+      
+    .button {
+        top: 150px;
+        left: 0px;
+        width: 250px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 50px;
+        background-color: #FFFFFF;
+        padding: 20px;
+    }
+    
+    .removeParkingLot-drop-down {
+        top: 195px;
+        left: 150px;
+        width: 100px;
+        height: 49px;
+        font-size: 20px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 5px;
+    }
+    .removeParkingLot-drop-down-title{
+        top: 130px;
+        left: 75px;
+        color: #FFFFFF;
+        width: 250px;
+        height: auto;
+        position: absolute;
+        font-size: 30px;
+        align-self: auto;
+        font-style: Light;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: normal;
+        font-stretch: normal;
+        text-decoration: none;
+    }
+    
+    #removeParkingLot-button {
+        top: 270px;
+        left: 85px;
+        width: 234px;
+        height: 63px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 50px;
+        background-color: #0047FF;
+        font-size: 27.606220245361328px;
+        color: #FFFFFF;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 300;
     }
 }
 

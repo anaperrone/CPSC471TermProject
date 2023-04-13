@@ -115,7 +115,7 @@
                 document.getElementById("chosenLotIDFormInfo").value = document.getElementById("chosenPlatnum").value;
                 document.getElementById("removeParkingLotForm").submit();
                 <?php
-                  if(isset($_POST['chosenPlatnum'])) 
+                  if(isset($_POST['chosenLotID'])) 
                   {
     
                     $chosenLotID = $_POST['chosenLotID'];
@@ -135,7 +135,7 @@
                 ?>
               setTimeout(function()
               {
-                window.location.href = "homePage.php";
+                window.location.href = "adminHomePage.php";
               }, 1);
               });
             </script>

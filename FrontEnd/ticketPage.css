@@ -8,7 +8,7 @@
 }
 .ticketPage-page {
     width: 100%;
-    height: auto;
+    height: 1117px;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -224,7 +224,8 @@
 
 @media(max-width: 414px) {
     .ticketPage-page {
-        height: auto;
+        height: 800px auto;
+        overflow-y: scroll;
     }
   
     .ticketPage-waves-background {
@@ -274,6 +275,8 @@
         flex-wrap: wrap;
         width: 350px;
         margin: auto;
+        position: absolute;
+        left: 20px;
     }
 
     .ticket-box {
@@ -285,12 +288,11 @@
         border-radius: 40px;
         margin: 10px;
         padding: 20px;
-        position: relative;
     }
 
     .ticket-title {
         top: 20px;
-        left: 5px;
+        left: 30px;
         color: #18274E;
         width: 200px;
         height: auto;

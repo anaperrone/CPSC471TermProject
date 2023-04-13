@@ -19,25 +19,6 @@
     background-color: rgba(23, 38, 77, 1);
 }
 
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 960px;
-    margin: auto;
-}
-  
-.button {
-    border: none;
-    position: relative;
-    width: 300px;
-    height: 225px;
-    font-size: 20px;
-    vertical-align: top;
-    margin: 10px;
-    border-radius: 50px;
-    background-color: #FFFFFF;
-}
-
 .selectVehiclePage-waves-background {
     top: 550px;
     left: 0px;
@@ -68,11 +49,31 @@
     position: absolute;
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: auto;
+}
+  
+.button {
+    border: none;
+    position: relative;
+    width: 300px;
+    height: 225px;
+    font-size: 20px;
+    vertical-align: top;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+}
+
 /* mobile compatability for displays with width under 414px */
 
 @media(max-width: 414px) {
     .selectVehiclePage-page {
         height: 844px;
+        overflow-y: scroll;
     }
   
     .selectVehiclePage-waves-background {
@@ -85,10 +86,29 @@
         display: none;
     }
     .parkshark-logo {
-        top: 750px;
+        top: 55px;
         left: 172px;
         position: absolute;
         width: 50px;
+    }
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        margin: auto;
+        position: absolute;
+        left: 35px;
+    }
+    
+    .button {
+        top: 150px;
+        left: 0px;
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 50px;
+        background-color: #FFFFFF;
+        padding: 20px;
     }
 }
 

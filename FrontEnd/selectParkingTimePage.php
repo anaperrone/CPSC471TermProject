@@ -86,6 +86,15 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+            <a href = 'homePage.php' class = 'homePage-button button'>
+              <img
+                src="public/playground_assets/homePageIcon.png"
+                alt="Vector125"
+                class="homePage-icon "
+              />
+              <span class="homePage-button-text">go to home page</span>
+              </span>
+            </a>
             <span class='selectParkingTimePage-message'><span>please select how long you will park for:</span></span>
 
             <span class="hours-drop-down-title">hours:</span>

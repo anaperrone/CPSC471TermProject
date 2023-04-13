@@ -212,6 +212,23 @@ INSERT INTO `Admins` (`AdminID`, `Name`, `Password`) VALUES
 ('11111', 'Admin', 'TheKing');
 -- --------------------------------------------------------
 
+--
+-- Table structure for table `Price`
+--
+
+DROP TABLE IF EXISTS Price;
+CREATE TABLE `Price` (
+	`thePrice` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping Data for "Admins"
+--
+
+INSERT INTO `Price` (`thePrice`) VALUES
+('5');
+
+-- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

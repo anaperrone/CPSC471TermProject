@@ -94,12 +94,15 @@
               //Gets vehicles for the user logged in and stores in vehiclesInUserArray
               $vehiclesInUserArray = $userArray[$userArrayIndex]->getVehicles();
               //Prints all the buttons and info inside. Assigns the plate number as the button id for each vehicle button
-              for($i = 0; $i < sizeof($vehiclesInUserArray); $i++)
+              if (!is_null($vehiclesInUserArray))
               {
-                echo "<button class='button' id='" . $vehiclesInUserArray[$i]->getPlatnum() . "'> <strong>Plate number:</strong><br>" . 
-                $vehiclesInUserArray[$i]->getPlatnum(). "<br><br> <strong>Car:</strong> " . $vehiclesInUserArray[$i]->getYear() . " " . 
-                $vehiclesInUserArray[$i]->getMake(). " " . $vehiclesInUserArray[$i]->getModel() . "<br><br><strong>Colour:</strong> " . 
-                $vehiclesInUserArray[$i]->getColour() . "</button>";
+                for($i = 0; $i < sizeof($vehiclesInUserArray); $i++)
+                {
+                  echo "<button class='button' id='" . $vehiclesInUserArray[$i]->getPlatnum() . "'> <strong>Plate number:</strong><br>" . 
+                  $vehiclesInUserArray[$i]->getPlatnum(). "<br><br> <strong>Car:</strong> " . $vehiclesInUserArray[$i]->getYear() . " " . 
+                  $vehiclesInUserArray[$i]->getMake(). " " . $vehiclesInUserArray[$i]->getModel() . "<br><br><strong>Colour:</strong> " . 
+                  $vehiclesInUserArray[$i]->getColour() . "</button>";
+                }
               }
             ?>
             <!-- Add vehicle page button -->

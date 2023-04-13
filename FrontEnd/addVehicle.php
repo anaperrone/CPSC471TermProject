@@ -17,12 +17,19 @@
     $UserArray = $db->DBGetUsers($carArray);
     
 
-    if (count($_POST) && isset($_POST["PlatNum"]) && isset($_POST["Model"]) && isset($_POST["Make"]) && isset($_POST["Colour"]) && isset($_POST["Year"])){
+    if (count($_POST) && !empty($_POST["PlatNum"]) && !empty($_POST["Model"]) && !empty($_POST["Make"]) && !empty($_POST["Colour"]) && !empty($_POST["Year"])){
         $Num = $_POST['PlatNum'];
         $Model = $_POST['Model'];
         $Make = $_POST['Make'];
         $Colour = $_POST["Colour"];
         $Year = $_POST["Year"];
+        foreach($carArray as $Car){
+            if($Num === ($Car->getPlatNum())){
+                $_SESSION["errorMessage"] .= "this plate number already exists, please try again";
+                header ("Location: userAddVehicle.php?erro=Plate Already Exists");
+                exit();
+            }
+        }
         foreach($UserArray as $User){
             if(($User->getUserName()) === $post_data){
                 $OID = $User->getAccountID();

@@ -158,6 +158,25 @@
     text-decoration: none;
 }
 
+.adminHomePage-price-button-text {
+    top: 40px;
+    left: 50px;
+    color: #18274E;
+    width: 111px;
+    height: auto;
+    position: absolute;
+    font-size: 27.606220245361328px;
+    align-self: auto;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
 .adminHomePage-vehicle-button {
     top: 650px;
     left: 875px;
@@ -329,6 +348,37 @@
         border-color: transparent;
         border-radius: 40px;
         background-color: #FFFFFF;
+    }
+
+    .adminHomePage-price-button {
+        top: 400px;
+        left: 40px;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 40px;
+        background-color: #FFFFFF;
+    }
+
+
+    .adminHomePage-price-button-text {
+        top: 40px;
+        left: 50px;
+        color: #18274E;
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 27.606220245361328px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
     }
     
     .adminHomePage-ticket-button-text {

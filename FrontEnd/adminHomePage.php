@@ -75,19 +75,19 @@
                 <span class='adminHomePage-reservestall-button-text'><span>manage parking stalls</span></span>
               </button>
             </a>
-            <a href='ticketPage.php' class='adminHomePage-ticket-button'> 
+            <a href='AdminTicketPrice.php' class='adminHomePage-ticket-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-ticket-button-text'><span>manage tickets</span></span>
+                <span class='adminHomePage-ticket-button-text'><span>set ticket price</span></span>
               </button>
             </a>
-            <a href='vehiclePage.php' class='adminHomePage-vehicle-button'> 
+            <a href='AdminVehiclePage.php' class='adminHomePage-vehicle-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-vehicle-button-text'><span>manage vehicles</span></span>
+                <span class='adminHomePage-vehicle-button-text'><span>delete vehicles</span></span>
               </button>
             </a>
             <a href='accountPage.php' class='adminHomePage-account-button'> 
               <button type = 'submit'>
-                <span class='adminHomePage-account-button-text'><span>manage accounts</span></span>
+                <span class='adminHomePage-account-button-text'><span>delete accounts</span></span>
               </button>
             </a>
         </div>

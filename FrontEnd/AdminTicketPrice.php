@@ -50,30 +50,30 @@
   </head>
   <body>
     <div>
-      <link href="./adminHomePage.css" rel="stylesheet" />
+      <link href="./AdminTicketPrice.css" rel="stylesheet" />
 
-      <div class="adminHomePage-container">
-        <div class="adminHomePage-page">
+      <div class="AdminTicketPrice-container">
+        <div class="AdminTicketPrice-page">
             <img
                 src="public/playground_assets/Waves.png"
-                class="adminHomePage-waves-background"
+                class="AdminTicketPrice-waves-background"
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
-            <span class='adminHomePage-whereto-message'><span>Set the Ticket Price in Dollars</span></span>
-            <form id = signup action='Price.php' method='post'>
+            <span class='AdminTicketPrice-message'><span>Set the Ticket Price in Dollars</span></span>
+            <form id = set action='Price.php' method='post'>
                 <input
                 type='text'
                 placeholder='Price in Dollars'
                 class='registerPage-fname-input input'
                 name = 'price'
                 />
-                <a href='javascript: signup.submit()' class='registerPage-register-button'>
+                <a href='javascript: set.submit()' class='AdminTicketPrice-set-button'>
                 <img
                     src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/dac7993b-0fcc-4108-a101-909773a42c84/5d7f7bba-1649-4eda-b469-e6f9dec67ded?org_if_sml=11235'
-                    class='registerPage-register-button-shape'
+                    class='AdminTicketPrice-set-button-shape'
                 />
-                <span class='registerPage-register-button-text'><span>register</span></span>
+                <span class='AdminTicketPrice-set-button-text'><span>register</span></span>
                 </a>
             </form>
         </div>

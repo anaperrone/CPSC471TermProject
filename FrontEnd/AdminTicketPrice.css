@@ -1,0 +1,225 @@
+.AdminTicketPrice-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+.AdminTicketPrice-page {
+    width: 100%;
+    height: 1117px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    justify-content: center;
+    background-color: rgba(23, 38, 77, 1);
+}
+.AdminTicketPrice-waves-background {
+    top: 550px;
+    left: 0px;
+    position: absolute;
+}
+.parkshark-logo-text {
+    top: 76px;
+    left: 178px;
+    color: rgba(255, 255, 255, 1);
+    width: 453px;
+    height: auto;
+    position: absolute;
+    font-size: 62.43959426879883px;
+    align-self: auto;
+    font-style: Bold;
+    text-align: left;
+    font-family: Montserrat Alternates;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+.parkshark-logo {
+    top: 76px;
+    left: 80px;
+    position: absolute;
+}
+
+.AdminTicketPrice-message {  /*this is the Welcome msg */
+    top: 300px;
+    left: 39%;
+    color: #FFFFFF;
+    width: 489px;
+    height: auto;
+    position: absolute;
+    font-size: 71.60655975341797px;
+    align-self: auto;
+    font-style: Regular;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.AdminTicketPrice-set-button { 
+    top: 600px;
+    left: 44%;
+    width: 234px;
+    height: 63px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    text-decoration: none;
+}
+.AdminTicketPrice-set-button-shape { 
+    top: 0px;
+    left: 0px;
+    width: 234px;
+    height: 63px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 50px;
+}
+.AdminTicketPrice-set-button-text {
+    top: 14px;
+    left: 62px;
+    color: rgba(255, 255, 255, 1);
+    width: 111px;
+    height: auto;
+    position: absolute;
+    font-size: 27.606220245361328px;
+    align-self: auto;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+.registerPage-fname-input {
+    top: 500px;
+    left: 43%;
+    width: 300px;
+    height: 61px;
+    position: absolute;
+    font-size: 20px;
+    font-family: Source Sans Pro;
+    border-style: hidden;
+    background-color: #FFFFFF;
+    border-top-width: 10px;
+    border-left-width: 20px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+}
+
+/* mobile compatability for displays with width under 414px */
+
+@media(max-width: 414px) {
+    .AdminTicketPrice-page {
+        height: 844px;
+    }
+  
+    .AdminTicketPrice-waves-background {
+        top: 600px;
+        width: 600px;
+        left: -110px;
+        position: absolute;
+    }
+    .parkshark-logo-text {
+        display: none;
+    }
+    .parkshark-logo {
+        top: 55px;
+        left: 172px;
+        position: absolute;
+        width: 50px;
+    }
+
+    .AdminTicketPrice-message {
+        top: 200px;
+        left: 50px;
+        color: rgba(255, 255, 255, 1);
+        width: 300px;
+        height: auto;
+        position: absolute;
+        font-size: 45px;
+        align-self: auto;
+        font-style: Regular;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 400;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
+    .AdminTicketPrice-set-button { /*this is the Log In button "container" */
+        top: 440px;
+        left: 90px;
+        width: 234px;
+        height: 55px;
+        display: flex;
+        position: absolute;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-color: transparent;
+        text-decoration: none;
+    }
+    .AdminTicketPrice-set-button-shape { /*this is the Log In button rec*/
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 55px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 50px;
+    }
+    .AdminTicketPrice-set-button-text { /*this is the Log In text inside the button*/
+        top: 11px;
+        left: 45px;
+        color: rgba(255, 255, 255, 1);
+        width: 111px;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 600;
+        line-height: normal;
+        font-stretch: normal;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
+    .registerPage-fname-input {
+        top: 350px;
+        left: 110px;
+        width: 165px;
+        height: 45px;
+        position: absolute;
+        font-size: 17px;
+        font-family: Source Sans Pro;
+        border-style: hidden;
+        background-color: #FFFFFF;
+        border-top-width: 10px;
+        border-left-width: 20px;
+        border-right-width: 10px;
+        border-bottom-width: 10px;
+    }
+}
+

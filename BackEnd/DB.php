@@ -341,8 +341,15 @@ class DBConnection extends mysqli {
     // setter for price
     function DBSetPrice($newPrice){
         $results = mysqli_query($this->connection, "DELETE FROM Price");
-        $results = mysqli_query($this->connection, "INSERT INTO Price (thePrice) VALUES ('$newPrice')");
         if(!$results){
+            echo "Query Failed: ";
+            exit();
+        }
+        else{
+            echo "Success";
+        }
+        $result1 = mysqli_query($this->connection, "INSERT INTO Price (thePrice) VALUES ('$newPrice')");
+        if(!$result1){
             echo "Query Failed: ";
             exit();
         }

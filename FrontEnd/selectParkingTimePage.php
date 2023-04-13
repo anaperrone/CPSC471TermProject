@@ -123,9 +123,14 @@
 
             <p id="total"></p>
             <button id="pay-button" style="display: none;">pay</button>
+            <?php
+              $db = new DBConnection();
+              $db->connectToDB($servername, $username, $password, $dbname);
+              $price = $db->DBGetPrice();
+            ?>
 
             <script>
-              var price = 5; //set hourly rate here
+              var price = "<?php echo $price; ?>"; //set hourly rate here
               document.getElementById("hours").addEventListener("change", function() { 
                 //wait for user to select a value from the drop down menu then calculate ticket price and show the pay button
                 calculateTotal();

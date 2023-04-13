@@ -70,7 +70,7 @@
                 <span class='adminHomePage-parkinglot-button-text'><span>manage parking lots</span></span>
               </button>
             </a>
-            <a href='reservestallPage.php' class='adminHomePage-reservestall-button'> 
+            <a href='AdminStallPage.php' class='adminHomePage-reservestall-button'> 
               <button type = 'submit'>
                 <span class='adminHomePage-reservestall-button-text'><span>manage parking stalls</span></span>
               </button>

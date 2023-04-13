@@ -10,6 +10,7 @@
     width: 100%;
     height: 1117px;
     display: flex;
+    overflow-y: scroll;
     overflow: hidden;
     position: relative;
     align-items: flex-start;
@@ -52,8 +53,11 @@
 .button-container {
     display: flex;
     flex-wrap: wrap;
-    width: 960px;
+    left: 500px;
+    top: 200px;
+    width: 1400px;
     margin: auto;
+    position: absolute;
 }
   
 .button {
@@ -157,8 +161,8 @@
     }
     
     .removeVehicle-drop-down {
-        top: 845px;
-        left: 250px;
+        top: 195px;
+        left: 150px;
         width: 100px;
         height: 49px;
         font-size: 20px;
@@ -167,8 +171,8 @@
         border-radius: 5px;
     }
     .removeVehicle-drop-down-title{
-        top: 850px;
-        left: 40px;
+        top: 130px;
+        left: 100px;
         color: #FFFFFF;
         width: 200px;
         height: auto;
@@ -176,7 +180,7 @@
         font-size: 30px;
         align-self: auto;
         font-style: Light;
-        text-align: left;
+        text-align: center;
         font-family: Source Sans Pro;
         font-weight: 300;
         line-height: normal;
@@ -185,7 +189,7 @@
     }
     
     #removeVehicle-button {
-        top: 950px;
+        top: 270px;
         left: 85px;
         width: 234px;
         height: 63px;

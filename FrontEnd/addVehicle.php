@@ -1,7 +1,6 @@
 <?php
     session_start();
     $post_data = $_SESSION['post_data']; // get the username from here
-    echo $post_data;
 
     $servername = "localhost";
     $username = "root";
@@ -33,7 +32,7 @@
         foreach($UserArray as $User){
             if(($User->getUserName()) === $post_data){
                 $OID = $User->getAccountID();
-                $theCar = new Vehicle($Num, $Model, $Make, $Colour, $Year, NULL, NULL, $OID);
+                $theCar = new Vehicle($Num, $Model, $Make, $Colour, $Year, 0, 0, $OID);
                 $db->DBInsertIntoVehicles($theCar);
                 // close the database connection
                 $db->closeDBConnection();

@@ -48,11 +48,75 @@
     position: absolute;
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 880px;
+    margin: auto;
+}
+  
+.button {
+    border: none;
+    position: relative;
+    width: 250px;
+    height: 200px;
+    font-size: 20px;
+    vertical-align: top;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+}
+
+.removeVehicle-drop-down {
+    top: 50%;
+    left: 10%;
+    width: 150px;
+    height: 49px;
+    font-size: 20px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 5px;
+}
+.removeVehicle-drop-down-title{
+    top: 40%;
+    left: 10%;
+    color: #FFFFFF;
+    width: 149px;
+    height: auto;
+    position: absolute;
+    font-size: 30px;
+    align-self: auto;
+    font-style: Light;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+#removeVehicle-button {
+    top: 60%;
+    left: 7.5%;
+    width: 234px;
+    height: 63px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 50px;
+    background-color: #0047FF;
+    font-size: 27.606220245361328px;
+    color: #FFFFFF;
+    align-self: auto;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-weight: 300;
+}
+
 /* mobile compatability for displays with width under 414px */
 
 @media(max-width: 414px) {
     .accountPage-page {
-        height: 844px;
+        height: 800px auto;
     }
   
     .accountPage-waves-background {
@@ -65,10 +129,75 @@
         display: none;
     }
     .parkshark-logo {
-        top: 750px;
+        top: 55px;
         left: 172px;
         position: absolute;
         width: 50px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        margin: auto;
+        position: absolute;
+        left: 70px;
+    }
+      
+    .button {
+        top: 150px;
+        left: 0px;
+        width: 250px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 50px;
+        background-color: #FFFFFF;
+        padding: 20px;
+    }
+    
+    .removeVehicle-drop-down {
+        top: 750px;
+        left: 150px;
+        width: 100px;
+        height: 49px;
+        font-size: 20px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 5px;
+    }
+    .removeVehicle-drop-down-title{
+        top: 650px;
+        left: 100px;
+        color: #FFFFFF;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        font-size: 30px;
+        align-self: auto;
+        font-style: Light;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        line-height: normal;
+        font-stretch: normal;
+        text-decoration: none;
+    }
+    
+    #removeVehicle-button {
+        top: 850px;
+        left: 85px;
+        width: 234px;
+        height: 63px;
+        position: absolute;
+        border-color: transparent;
+        border-radius: 50px;
+        background-color: #0047FF;
+        font-size: 27.606220245361328px;
+        color: #FFFFFF;
+        align-self: auto;
+        text-align: center;
+        font-family: Source Sans Pro;
+        font-weight: 300;
     }
 }
 

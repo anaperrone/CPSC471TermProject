@@ -95,7 +95,7 @@
                 ?>
               </div> <!-- End of button container -->
               <!-- Remove vehicle text -->
-              <span class="removeVehicle-drop-down-title">Remove vehicle</span>
+              <span class="removeVehicle-drop-down-title">remove username</span>
               <!-- Drop down menu -->
               <select class="removeVehicle-drop-down" id="chosenPlatnum">
                 <?php

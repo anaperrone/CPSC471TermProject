@@ -1,5 +1,17 @@
 <?php    
     session_start();
+    $post_data = $_SESSION['post_data']; // get the username from here
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "ParkingData";
+    // initialize the database connection using the DB driver code
+    include_once '../BackEnd/DB.php';
+    $db = new DBConnection();
+    $db->connectToDB($servername, $username, $password, $dbname);
+    $carArray = $db->DBGetVehicles();
+    $UserArray = $db->DBGetUsers($carArray);
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +76,79 @@
             />
             <span class="parkshark-logo-text"><span>ParkShark</span></span>
             <img src="public/playground_assets/Logo.png" class = "parkshark-logo"/>
+
+            <!-- Button container to make everything look nice -->
+              <div class="button-container">
+                <?php
+                  //Gets vehicles for the user logged in and stores in vehiclesInUserArray
+                  //Prints all the buttons and info inside. Assigns the plate number as the button id for each vehicle button
+                  //if (!is_null($vehiclesInUserArray))
+                // {
+                    for($i = 0; $i < sizeof($UserArray); $i++)
+                    {
+                      echo "<button class='button' id='" . $UserArray[$i]->getFirstName() . "'> <strong>First Name:</strong><br>" . 
+                      $UserArray[$i]->getUserName(). "<br><br> <strong>Name:</strong> " . $UserArray[$i]->getFirstName() . " " . 
+                      $UserArray[$i]->getLastName(). "<br><br><strong>AccountID:</strong> " . 
+                      $UserArray[$i]->getAccountID() . "</button>";
+                    }
+                  //}
+                ?>
+              </div> <!-- End of button container -->
+              <!-- Remove vehicle text -->
+              <span class="removeVehicle-drop-down-title">Remove vehicle</span>
+              <!-- Drop down menu -->
+              <select class="removeVehicle-drop-down" id="chosenPlatnum">
+                <?php
+                  for($i = 0; $i < sizeof($UserArray); $i++)
+                  {
+                    echo "<option value='" . $UserArray[$i]->getUserName() . "'>" . $UserArray[$i]->getUserName() . "</option>";
+                  }
+                ?>
+              </select>
+              <!-- Form needed to convert javascript input to php variable -->
+              <form id="removeVehicleForm" method="post" action="accountPage.php">
+                <input type="hidden" id="chosenPlatnumFormInfo" name="chosenPlatnum" value="">
+              </form>
+              <!-- Submit button -->
+              <button id="removeVehicle-button">Submit</button>
+              <!-- Start javascript code  -->
+              <script>
+                // Makes the button respond to clicks
+                document.getElementById("removeVehicle-button").addEventListener("click", function() {
+                  //The below two statements are the response to the clicks
+                  document.getElementById("chosenPlatnumFormInfo").value = document.getElementById("chosenPlatnum").value;
+                  document.getElementById("removeVehicleForm").submit();
+                  <?php
+                    //if statement to make sure the form is submitted before doing logic
+                    if(isset($_POST['chosenPlatnum'])) 
+                    {
+                      //Access post variable from obtained from .submit() just above
+                      $chosenPlatnum = $_POST['chosenPlatnum'];
+                      
+                     
+                      //We find the location in the logged in user's vehicle array, where the chosen plate number matches and store it in vehiclesInUserArrayIndex
+                      for($i = 0; $i < sizeof($UserArray); $i++)
+                      {
+                        if($UserArray[$i]->getUserName() == $chosenPlatnum)
+                        {
+                          $Index = $i;
+                        }
+                      }
+                      //Delete Vehicle from DB.php which takes in a vehicle object
+                      $db->DBDeleteFromUsers($UserArray[$Index]);
+                    }
+                    //Close connection  
+                    $db->closeDBConnection();
+                  ?>
+                //Timeout of 0 ensures that the above code is executed first and then we are brought back to homePage.php
+                setTimeout(function()
+                {
+                  window.location.href = "adminHomePage.php";
+                }, 1);
+                });     
+              </script> 
+
+
         </div>
       </div>
     </div>
